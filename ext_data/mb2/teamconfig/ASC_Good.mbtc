@@ -71,20 +71,21 @@ SubclassesForClass4
 {
 	Subclass1	"h7_Spy"
 	Subclass2 	"h7_RebSapper"
-	Subclass3	"h7_CloneAss"
-	Subclass4	"h7_Hera"
-	Subclass5	"h7_Leia"
-	Subclass6	"h7_Lobot"
-	Subclass7  	"asg7_Mira"
-	Subclass8	"h7_HK47"
-	Subclass9	"h7_T3M4"
-	Subclass10 	"h8_WookWarr"
-	Subclass11	"h8_NRSecDroid" 
-	Subclass12	"h8_Wreck"
-	Subclass13	"h8_Chewie"
-	Subclass14 	"h8_Tarfful"
-	Subclass15	"h8_Zaal"
-	Subclass16	"h8_K2SO"
+	Subclass3	"asg7_RebSpecOps"
+	Subclass4	"h7_CloneAss"
+	Subclass5	"h7_Hera"
+	Subclass6	"h7_Leia"
+	Subclass7	"h7_Lobot"
+	Subclass8  	"asg7_Mira"
+	Subclass9	"h7_HK47"
+	Subclass10	"h7_T3M4"
+	Subclass11 	"h8_WookWarr"
+	Subclass12	"h8_NRSecDroid" 
+	Subclass13	"h8_Wreck"
+	Subclass14	"h8_Chewie"
+	Subclass15 	"h8_Tarfful"
+	Subclass16	"h8_Zaal"
+	Subclass17	"h8_K2SO"
 }
 
 SubclassesForClass5
@@ -119,4 +120,5 @@ SubclassesForClass6
 	Subclass13	"asg10_RahmKota"
 	Subclass14	"asg10_JForce"
 }
+
 
