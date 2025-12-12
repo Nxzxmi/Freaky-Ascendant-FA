@@ -6,7 +6,7 @@ EUAllowed 0
 
 Classes
 {
-	class1	"s_1ra_sold"
+	class1	"h1_Rebel"
 	class2	"h3_Clone"
 	class3	"h5_CloneJet"
 	class4	"h7_Scavenge"
@@ -21,7 +21,7 @@ SubclassesForClass1
 	Subclass3	"h1_SecurET"
 	Subclass4	"h1_OldRepET"
 	subclass5 	"h1_TORtroop"
-	Subclass6	"h2_Padme" 
+	Subclass6	"asg2_Padme" 
 	Subclass7	"h2_JarJar" 
 	Subclass8 	"h2_Panaka"
 	Subclass9  	"h2_JynE"
@@ -29,8 +29,6 @@ SubclassesForClass1
 	Subclass11	"h2_Lando"
 	Subclass12	"h2_JanO"
 	Subclass13	"asg2_Carth"
-	Subclass14	"asg2_Padme"
-	Subclass15	"s_1ra_vang"
 }
 
 SubclassesForClass2
@@ -56,7 +54,7 @@ SubclassesForClass2
 
 SubclassesForClass3
 {
-	Subclass1 	"h5_NiteOwl"
+	Subclass1 	"asg5_NiteOwl"
 	Subclass2	"h5_AstroR2"
 	Subclass3	"h5_Skirata"
 	Subclass4	"h5_BoKatan"
@@ -118,7 +116,6 @@ SubclassesForClass6
 	Subclass10	"h10_Grogu"
 	Subclass11	"asg10_JKindredProtect"
 	Subclass12	"asg10_JKindredAbsorb"
-	Subclass13	"s_d_mohrgan"
 	Subclass14	"asg10_RahmKota"
 }
 

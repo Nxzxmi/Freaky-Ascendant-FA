@@ -6,7 +6,7 @@ EUAllowed 0
 
 Classes
 {
-	class1	"s_1em_sold"
+	class1	"v1_ImpSold"
 	class2	"v3_FOMarsh"
 	class3	"v6_ScoutTr"
 	Class4	"v8_GamoPig" 
@@ -46,7 +46,7 @@ SubclassesForClass2
 	Subclass6	"v4_Mara"
 	Subclass7	"v5_ImpArmCom"
 	Subclass8	"v5_Geonos"
-	Subclass9 	"v5_MaulMando"
+	Subclass9 	"ase5_MaulMando"
 	Subclass10	"v5_JumpTr"
 	Subclass11	"v5_DarkTr"
 	Subclass12	"v5_Jango"
@@ -54,7 +54,6 @@ SubclassesForClass2
 	Subclass14	"v5_Cad"
 	Subclass15	"v5_Boba"
 	Subclass16	"v5_Watto"
-	Subclass17	"s_1em_vet"
 }
 
 SubclassesForClass3
@@ -86,6 +85,7 @@ SubclassesForClass4
 	Subclass3	"v8_Burg"
 	Subclass4	"v8_Galak"
 	Subclass5	"v8_Snoova"
+	Subclass6	"ase8_BlackK"
 }
 
 SubclassesForClass5
@@ -120,9 +120,5 @@ SubclassesForClass6
 	Subclass9	"ase10_TrayaTrio"
 	Subclass10	"v10_Traya"
 	Subclass11	"ase10_Abeloth"
-	Subclass12	"s_d_krayt"
-	Subclass13	"s_13vo_bru"
-	Subclass14	"s_16ie_gs3"
-	Subclass15	"s_16ie_vet"
 }
 
