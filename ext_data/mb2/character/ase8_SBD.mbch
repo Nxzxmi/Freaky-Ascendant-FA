@@ -180,6 +180,7 @@ WeaponInfo0
 	WeaponName		"B2-WW Wrist Rockets"
 	clipSize 1
 	CustomAmmo 3
+	altFireEnabled		0
 	ReloadTimeModifier 6
 	velocityMod 1.15
 }
@@ -211,4 +212,5 @@ A slow moving battle droid that must strike a balance between firepower, protect
 
 ^8Attributes:
 - 15% less KB taken
+
 - Battery Recharge (2)"
