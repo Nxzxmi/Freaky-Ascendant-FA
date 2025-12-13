@@ -4,7 +4,7 @@ ClassInfo
 name "asg2_RebelSabo"
 weapons WP_MELEE
 forcepowers FP_BLIND,3
-attributes MB_ATT_TRACKING_BEACON|MB_ATT_POISON_DART,3|MB_ATT_TRACKING_DART,3|MB_ATT_DEXTERITY,2|MB_ATT_THROWER_LIGHTNING|MB_ATT_STAMINA,3
+attributes MB_ATT_POISON_DART,3|MB_ATT_DEXTERITY,2|MB_ATT_THROWER_LIGHTNING|MB_ATT_STAMINA,3
 maxhealth 80
 MaxArmor 20
 rankArmor 30,60,80
@@ -14,7 +14,7 @@ MBClass MB_CLASS_HERO
 classNumberLimit 3
 holdables HI_SEEKER
 special1 EAS_HI_POISON
-special2 EAS_HI_TRACKER
+special2 
 special3 EAS_HI_DASH
 special4 EAS_HI_GRAPPLEHOOK
 uioverlay "gfx/icons/tactician"
@@ -29,7 +29,7 @@ skin "default"
 uishader "models/players/nrmarine/mb2_icon_default"
 model_1 "rebel_heavy"
 skin_1 "default"
-uishader_1		"models/players/rebel_heavy/mb2_icon_default"
+uishader_1 "models/players/rebel_heavy/mb2_icon_default"
 model_2 "rebel_partisan"
 skin_2 "default"
 uishader_2 "models/players/rebel_partisan/mb2_icon_default"
@@ -135,18 +135,18 @@ NewWorldModel "models/weapons2/kotor_ionpistol/kotor_ionpistol_w.glm"
 NewViewModel "models/weapons2/kotor_ionpistol/kotor_ionpistol.md3"
 Icon "gfx/hud/w_icon_kotor_ionpistol"
 WeaponName "Tranquilizer Pistol"
-CustomAmmo 24 //12 prim, 9 bounce
+CustomAmmo 24
 clipSize 3
 FlashSound0 "sound/weapons/mgun/alt_fire.wav"
 AltFlashSound0 "sound/weapons/mgun/alt_fire.wav"
-MuzzleEffect "Blaster/MuzzleFlash01B
+MuzzleEffect "Blaster/MuzzleFlash01B"
 AltMuzzleEffect "Blaster/MuzzleFlash03B"
 MissileEffect "blaster/Shot04B"
 AltMissileEffect "blaster/Shot04B"
 FPMult 0.2
 damageMod 0.2
 velocityMod 0.5
-reloadTimeModifier 4 //so you cant infinite chainstun
+reloadTimeModifier 4
 }
 WeaponInfo3
 {
@@ -233,8 +233,8 @@ WeaponInfo7
 {
 WeaponToReplace WP_DEMP2
 WeaponBasedOff WP_DEMP2
-NewWorldModel "models\weapons2\kotor_sonicrifle\kotor_sonicrifle_w.glm"
-NewViewModel "models\weapons2\kotor_sonicrifle\kotor_sonicrifle.md3"
+NewWorldModel "models/weapons2/kotor_sonicrifle/kotor_sonicrifle_w.glm"
+NewViewModel "models/weapons2/kotor_sonicrifle/kotor_sonicrifle.md3"
 Icon "gfx/hud/w_icon_kotor_sonicrifle"
 WeaponName "Disruption Blaster"
 velocityMod 0.3
@@ -247,9 +247,9 @@ FlashSound0 "sound/weapons/czerka_adventurer_rifle/fire.mp3"
 }
 ForceInfo0
 {
- ForceToReplace FP_BLIND
- Icon "gfx/marvel/spidersense"
- ForcePowerName "Sensory Scrambler"
+ForceToReplace FP_BLIND
+Icon "gfx/marvel/spidersense"
+ForcePowerName "Sensory Scrambler"
 }
 description "Rebel Saboteur [Hero]
 
