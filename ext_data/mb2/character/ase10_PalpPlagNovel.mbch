@@ -44,7 +44,6 @@ Classinfo
 	sabercolor_1	0
 	saber2color_1	0	
 	
-	
 	model		"palpatine"
 	skin			"default"
 	uishader		"models/players/palpatine/mb2_icon_default"

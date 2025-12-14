@@ -55,7 +55,7 @@ ClassInfo
 	
 	model_1	"moff_gideon"
 	skin_1	"default"
-	uishader_1  	"models/players/_moff_gideon/mb2_icon_default"
+	uishader_1  	"models/players/moff_gideon/mb2_icon_default"
 	
 	isCustomBuild	1
 	mbPoints	50

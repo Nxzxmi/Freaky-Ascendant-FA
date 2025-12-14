@@ -17,7 +17,7 @@ ClassInfo
 	
 	model			"darthtraya"
 	skin				"telekineticduelist"
-	uishader			"models/players/kreia/mb2_icon_telekineticduelist"
+	uishader			"models/players/darthtraya/mb2_icon_telekineticduelist"
 	
  	saber1			trayasab
 	sabercolor		0
