@@ -124,7 +124,7 @@ ClassInfo
 	saber1_1			single_3
 	sabercolor_1		3
 	saber2_1			single_3
-	sabercolor2_1 		5
+	saber2color_1 		5
 	saberstyle_1		SS_DUAL|SS_FAST
 	
 	saber1_2  		dual_4
