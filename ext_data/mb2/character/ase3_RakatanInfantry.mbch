@@ -235,7 +235,7 @@ Clipsize	30
 customAmmo 400
 rateMod 2.0
 reloadTimeModifier 1.4
-damageMod 1.3
+damageMod 1.5
 velocityMod	1
 }
 ForceInfo0
@@ -270,4 +270,5 @@ A Rakatan soldier hailing from the Infinite Empire era with front and backline o
 - Assemble (2)
 - Strength (2)
 - Fury (2)
+
 - 300% Longer Skill CD"
