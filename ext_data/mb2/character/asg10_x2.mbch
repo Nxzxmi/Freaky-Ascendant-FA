@@ -11,7 +11,7 @@ ClassInfo
         forcepowers             FP_SEE,3|FP_LEVITATION,3|FP_PUSH,3|FP_SABERTHROW,3|FP_SPEED,2|FP_GRIP,1
         forcepool               150
 	maxhealth		150
-        classflags	        CFL_STRONGAGAINSTPHYSICAL|CFL_NOLOCATIONALDAMAGE
+        classflags	        CFL_STRONGAGAINSTPHYSICAL
 	model			"x2_jedi"
 	skin			"default"
         uishader	        "models/players/x2_jedi/mb2_icon_default"
@@ -51,6 +51,7 @@ Force Repulse ^3[CS1]
 
 Attributes:
 25% Faster Hacking
+Resistant to Melee
 
 X2, along with his brother X1, was a force-sensitive clone trooper of the Galactic Republic, secretly created from Jedi Knight Falon Grey's DNA. 
 Shortly after Order 66 X2 defected from the newly formed Empire, joining his genetic donor whose he considered as father on Dantooine. Imperial attack on Dantooine led by X1 then resulted in Falon Grey's death, who eventually sacrifised himself to save X2.
