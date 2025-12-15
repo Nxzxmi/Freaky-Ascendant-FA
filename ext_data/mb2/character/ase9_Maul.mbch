@@ -21,7 +21,7 @@ ClassInfo
 	speed				1.07
 	damageGiven  1.1
 
-	saberstyle SS_STAFF|SS_DESANN
+	saberstyle SS_STAFF|SS_MEDIUM
 	BPmultiplier		1.18
 	APmultiplier		1.18
 	ASmultiplier	 1.18
