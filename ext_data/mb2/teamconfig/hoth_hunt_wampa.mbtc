@@ -1,8 +1,8 @@
 name "hoth_hunt_wampa"
 
-ClassesAllowed 4
-TimePeriod 3
-EUAllowed 0
+ClassesAllowed 0
+TimePeriod 7
+EUAllowed 1
 
 Classes
 {

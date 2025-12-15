@@ -2,7 +2,7 @@
 
 ClassInfo
 {
-	name			"hunt_hoth_Rebel"
+	name			"hoth_hunt_Rebel"
 	weapons			WP_BLASTER_PISTOL|WP_A280|WP_MELEE
 	attributes		MB_ATT_PISTOL,1|MB_ATT_A280,1|MB_ATT_AMMO,3|MB_ATT_RESPAWNS,2|MB_ATT_ASSEMBLE,3|MB_ATT_HEALING,1
 	maxhealth		60

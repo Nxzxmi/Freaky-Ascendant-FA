@@ -2,7 +2,7 @@
 
 ClassInfo
 {
-	name				"hunt_hoth_heavy"
+	name				"hoth_hunt_heavy"
 	weapons				WP_PLX1|WP_BLASTER_PISTOL|WP_MELEE|WP_CONC_NADE
 	attributes			MB_ATT_PISTOL,1|MB_ATT_PLX1,3|MB_ATT_AMMO,3|MB_ATT_RESPAWNS,1|MB_ATT_HEALING,2|MB_ATT_MICRO_GRENADES,1|MB_ATT_ASSEMBLE,1|MB_ATT_TRIP_MINES,4|MB_ATT_BLAST_ARMOR,1
 	maxhealth			80

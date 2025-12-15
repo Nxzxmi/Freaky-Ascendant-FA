@@ -1,8 +1,8 @@
 name "hoth_hunt_rebs"
 
-ClassesAllowed 4
-TimePeriod 3
-EUAllowed 0
+ClassesAllowed 0
+TimePeriod 7
+EUAllowed 1
 
 Classes
 {
@@ -10,6 +10,6 @@ Classes
 	class2		"hoth_hunt_heavy"
 	class3		"hoth_hunt_sniper"
 	class4		"hoth_hunt_engineer"
-	class5		"hoth_hunt_hothan"
+	class5		"hoth_hunt_bothan"
 	class6		"hoth_hunt_wookiee"
 }
