@@ -2,7 +2,7 @@
 
 ClassInfo
 {
-	name				"hunt_hoth_wookiee"
+	name				"hoth_hunt_wookiee"
 	weapons				WP_MELEE|WP_FRAG_NADE
 	attributes			MB_ATT_HEALING,2|MB_ATT_WOOKIE_STRENGTH,1|MB_ATT_AMMO,3|MB_ATT_FRAGS,3
 	maxhealth			150
