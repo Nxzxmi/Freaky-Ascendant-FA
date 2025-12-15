@@ -33,7 +33,7 @@ ClassInfo
 	forcepool 100
 	
 	//WP_MeleeFlags		HELD_SLOW
-	WP_RocketLauncherFlags HELD_LOWDAMAGE
+	//WP_RocketLauncherFlags HELD_LOWDAMAGE
 
 	model		"SBD"
 	skin			"default"
@@ -117,7 +117,7 @@ ClassInfo
 
 	c_att_skill_2	MB_ATT_ROCKET_LAUNCHER
 	c_att_names_2	"Wrist Rockets"
-	c_att_ranks_2	10
+	c_att_ranks_2	15
 	c_att_descs_2 "Watch those wrist rockets!"
 
 	c_att_skill_3	MB_ATT_SBD_CANNON
@@ -127,11 +127,15 @@ ClassInfo
 	
 	c_att_skill_4	MB_ATT_SHOTGUN
 	c_att_names_4	"Multi-Shot Blaster"
-	c_att_ranks_4	15
+	c_att_ranks_4	30
 
 	c_att_skill_5	MB_ATT_RESPAWNS
 	c_att_names_5	"Reinforcement"
 	c_att_ranks_5	30
+
+	c_att_skill_6	MB_ATT_ASSEMBLE
+	c_att_names_6	"> Assemble"
+	c_att_ranks_6	5
 
 	c_att_skill_7	MB_ATT_HEALTH
 	c_att_names_7	"Health (180/240/330)"
@@ -179,7 +183,7 @@ WeaponInfo0
 	Icon			"gfx/hud/w_icon_wristrocket"
 	WeaponName		"B2-WW Wrist Rockets"
 	clipSize 1
-	CustomAmmo 3
+	CustomAmmo 2
 	altFireEnabled		0
 	ReloadTimeModifier 6
 }
@@ -196,7 +200,7 @@ WeaponInfo1
 	WeaponName			"B2 Multishot"
 	altFireEnabled		0
 	ReloadTimeModifier  0.95
-	DamageMod			0.75
+	DamageMod			0.8
 }
 
 description	"B2-series Super Battle Droid [Super Battle Droid]
@@ -215,3 +219,5 @@ A slow moving battle droid that must strike a balance between firepower, protect
 - Battery Recharge (2)
 - Advanced Logic (1)
 - Advanced Radar"
+
+
