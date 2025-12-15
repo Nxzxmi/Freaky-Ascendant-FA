@@ -22,7 +22,7 @@ ClassInfo
 	rateoffire_melee	1.05
 	skilltimermod 0.90
 	hackrate	0.95
-	saberchainlimit	2
+	sabermaxchain	2
 	
 	saber1		electrostaff_legends
 	sabercolor	5
