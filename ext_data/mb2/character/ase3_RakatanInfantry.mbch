@@ -1,19 +1,16 @@
 // Air
-
 ClassInfo
 {
-name		"ase3_RakatanInfantry"
-MBClass		MB_CLASS_WOOKIE
-weapons		WP_SABER|WP_MELEE
+name	"ase3_RakatanInfantry"
+MBClass	MB_CLASS_WOOKIE
+weapons	WP_SABER|WP_MELEE
 WP_BlasterPistolFlags HELD_PULSE|HELD_AMMOREGEN
 WP_RepeaterFlags HELD_AMMOREGEN|HELD_PULSE
 WP_CloneRifleFlags HELD_ALTRELOAD
 attributes	MB_ATT_HEALING,2|MB_ATT_ASSEMBLE,2|MB_ATT_GUN_DEFENSE,0|MB_ATT_FP_SABER_DEFENSE,1|MB_ATT_WOOKIEE_FURY,2|MB_ATT_WOOKIE_STRENGTH,2|MB_ATT_CLONEBLOBS,1
 classflags	CFL_BLOODYMELEE
 classNumberLimit	6
-
 forcepowers	FP_RAGE,1|FP_LEVITATION,1|FP_PUSH,1
-	
 resource RESOURCE_RAGE
 resourceRegenCap 	300
 resourceRegenAmount 1
@@ -30,34 +27,28 @@ rankArmor	35
 basespeed	215
 skilltimermod	3.0
 damageTaken		0.85
-	
 special1 EAS_MELEE
 special2 EAS_FP_RAGE
 special3 EAS_FP_REPULSE
 rankSaberDamage 235, 270
 saberdamage 120
-
 saberMaxChain 3
 saber1		rakatan_forceblade_staff
 saberstyle	SS_STAFF
 saber1_1	rakatan_saberpike_legends
 saberstyle_1	SS_DESANN
 sabercolor_1	.07
-	
 APmultiplier	1.05
 rankAPMultiplier
 BPmultiplier	.5
 rankBPMultiplier 1
-modelscale        1.05
-	
-model 		"Rakata"
-skin		"default_2"
+modelscale 1.05
+model 	"Rakata"
+skin	"default_2"
 uishader	"models/players/Rakata/mb2_icon_default"
-	
 model_1 	"Rakata"
 skin_1		"default_3"
-uishader_1	"models/players/Rakata/mb2_icon_default3"	
-	
+uishader_1	"models/players/Rakata/mb2_icon_default3"
 hasCustomSpec 2
 isOnlyOneSpec 1
 isCustomBuild	1
@@ -68,46 +59,37 @@ customSpecDesc_1 "^7A frontliner with ranged or melee options."
 c_att_skill_0	MB_ATT_RESPAWNS
 c_att_ranks_0	0,0
 c_att_names_0	"Reinforcements"
-c_att_skill_1	
-c_att_ranks_1	
-c_att_names_1	""
-c_att_skill_2	MB_ATT_CLONERIFLE
-c_att_ranks_2	15,0
-c_att_names_2	"Rakatan Blaster (Clone Rifle)"
-c_att_descs_2	"^72 Concussion Blobs, 45% Longer Reload, 10% Faster RoF, -10% Velocity"
-c_att_skill_3	MB_ATT_ARMOUR
-c_att_ranks_3	5
-c_att_names_3	"Armor (35)"
-c_att_skill_4	
-c_att_ranks_4	
-c_att_names_4	""
-c_att_skill_5	MB_ATT_SABER_DAMAGE
+c_att_skill_1	MB_ATT_CLONERIFLE
+c_att_ranks_1	15,0
+c_att_names_1	"Rakatan Blaster (Clone Rifle)"
+c_att_descs_1	"^72 Concussion Blobs, 45% Longer Reload, 10% Faster RoF, -10% Velocity"
+c_att_skill_2	MB_ATT_ARMOUR
+c_att_ranks_2	5
+c_att_names_2	"Armor (35)"
+c_att_skill_3	MB_ATT_SABER_DAMAGE
+c_att_ranks_3	4
+c_att_names_3	"Saber Damage (235)"
+c_att_skill_4	MB_ATT_FP_SABER_DEFENSE
+c_att_ranks_4	4,0
+c_att_names_4	"Saber Defense"
+c_att_skill_5	MB_ATT_BP_MULTIPLIER
 c_att_ranks_5	4
-c_att_names_5	"Saber Damage (235)"
-c_att_skill_6	MB_ATT_FP_SABER_DEFENSE
-c_att_ranks_6	4,0
-c_att_names_6	"Saber Defense"
-c_att_skill_7	MB_ATT_BP_MULTIPLIER
-c_att_ranks_7	4
-c_att_names_7	"Saber BP (100%)"
-c_att_skill_8	MB_ATT_POWER
-c_att_ranks_8	4
-c_att_names_8	"Rage Pool (100)"
-	
-	
+c_att_names_5	"Saber BP (100%)"
+c_att_skill_6	MB_ATT_POWER
+c_att_ranks_6	4
+c_att_names_6	"Rage Pool (100)"
 customSpecName_2 "Sorcerer"
 customSpecIcon_2 "gfx/menus/alpha/Icon_SaberCustom"
 customSpecDesc_2 "^7A backliner with force power options."
-	
 c_att_skill_15	MB_ATT_RESPAWNS
 c_att_ranks_15	0
 c_att_names_15	"Reinforcements"
-c_att_skill_16
-c_att_ranks_16
-c_att_names_16	""
-c_att_skill_17	MB_ATT_FP_PUSH
+c_att_skill_16	MB_ATT_FP_PUSH
+c_att_ranks_16	0,5
+c_att_names_16	"Push"
+c_att_skill_17	MB_ATT_FP_PULL
 c_att_ranks_17  0,5
-c_att_names_17  "Push"
+c_att_names_17  "Pull"
 c_att_skill_18	MB_ATT_FP_PULL
 c_att_ranks_18	0,5
 c_att_names_18	"Pull"
@@ -136,8 +118,8 @@ WeaponInfo0
 {
 WeaponToReplace WP_BLASTER_PISTOL
 WeaponBasedOff WP_BLASTER_PISTOL
-NewWorldModel		"models/weapons2/dummyblaster/model.glm"
-NewViewModel		"models/weapons2/dummy/dummy.md3"
+NewWorldModel	"models/weapons2/dummyblaster/model.glm"
+NewViewModel	"models/weapons2/dummy/dummy.md3"
 Icon	"gfx/effects/rakatanpistol.tga"
 WeaponName "Lightning Zap"
 MissileHitHumanEffect "SBD/Cortosis_blue"
@@ -146,7 +128,7 @@ MissileEffect	"arc_caster/ArcCasterShock"
 MuzzleEffect	"effects/force/lightningwide.efx"
 MissileMissEffect "SBD/Cortosis_blue"
 FlashSound0 "sound/weapons/force/lightning.wav"	
-Clipsize	10
+Clipsize 10
 customAmmo 150
 rateMod 1.35
 damageMod 1.15
@@ -161,15 +143,15 @@ animReadyWalk BOTH_FORCE_DRAIN_GRAB_START
 animReadyNoAmmo BOTH_FORCE_2HANDEDLIGHTNING_RELEASE
 animAttack BOTH_FORCE_DRAIN_GRAB_HOLD
 animAttackWalk BOTH_FORCE_DRAIN_GRAB_HOLD
-AltFireEnabled 		0
-PrimFireEnabled		1
+AltFireEnabled 0
+PrimFireEnabled	1
 }
 WeaponInfo1
 {
 WeaponToReplace WP_REPEATER
 WeaponBasedOff WP_REPEATER
-NewWorldModel		"models/weapons2/dummyblaster/model.glm"
-NewViewModel		"models/weapons2/dummy/dummy.md3"
+NewWorldModel	"models/weapons2/dummyblaster/model.glm"
+NewViewModel	"models/weapons2/dummy/dummy.md3"
 Icon	"gfx/effects/rakatanrepeater.tga"
 WeaponName "Lightning Shockwave"
 altMissileHitHumanEffect "effects/Grenades/EXP_Pulsenade.efx"
@@ -199,9 +181,9 @@ WeaponInfo2
 {
 WeaponToReplace WP_CLONE_RIFLE
 WeaponBasedOff WP_CLONE_RIFLE
-NewWorldModel		"models/weapons2/golan_arms/rakatagolan_arms_w.glm"
-NewViewModel		"models/weapons2/golan_arms/rakatagolan_arms.md3"
-NewBarrelModel		"models/weapons2/golan_arms/rakatagolan_arms_barrel.md3"
+NewWorldModel	"models/weapons2/golan_arms/rakatagolan_arms_w.glm"
+NewViewModel	"models/weapons2/golan_arms/rakatagolan_arms.md3"
+NewBarrelModel	"models/weapons2/golan_arms/rakatagolan_arms_barrel.md3"
 Icon	"gfx/effects/w_icon_flechette.tga"
 FlashSound0 "sound/weapons/repeater/fire_old.wav"
 MissileHitHumanEffect "effects/Blaster/Impact_Flesh"
