@@ -7,10 +7,10 @@ ClassInfo
 	saber1			saber_pic_legends
 	sabercolor		1
 	saberstyle		SS_DESANN
-	forcepowers		FP_LEVITATION,3|FP_TEAM_HEAL,1|FP_SABER_OFFENSE,2|FP_SABER_DEFENSE,1|FP_TEAM_FORCE,1|FP_SEE,2|FP_TELEPATHY,1|FP_SPEED,1
+	forcepowers		FP_LEVITATION,3|FP_TEAM_HEAL,1|FP_SABER_OFFENSE,2|FP_SABER_DEFENSE,1|FP_TEAM_FORCE,1|FP_SEE,2|FP_TELEPATHY,1|FP_SPEED,1|FP_PUSH,2
 	attributes		MB_ATT_FP_SABER_DEFENSE,2|MB_ATT_GUN_DEFENSE,1|MB_ATT_FORCEFOCUS,1|MB_ATT_FORCEBLOCK,2|MB_ATT_BUNNY_HOP|MB_ATT_DEFLECT,0|MB_ATT_FLIPKICK,1
 	maxhealth		60
-	forcepool		75
+	forcepool		125
 	model			"pic"
 	skin			"default"
 	uishader		"models/players/pic/icon_default"
@@ -42,6 +42,7 @@ Pic's Lightsaber
 
 ^5Force Powers:
 Force Jump (3)
+Force Push (2)
 Force Speed (1)
 Team Heal (1) ^3[CS1]
 Team Force (1) ^3[CS2]

@@ -39,7 +39,7 @@ MissileMissEffect "effects/sparks/spark_exp_nosnd"
 MissileHitHumanEffect "effects/sparks/spark_exp_nosnd"
 MissileHitDroidEffect "effects/sparks/spark_exp_nosnd"
 rateMod .2
-damageMod 1.3
+damageMod 0.8
 }
 
 WeaponInfo1
@@ -90,7 +90,7 @@ Flechette Launcher (1)
 F-187 Fusion Cutter (Stun Baton)
 -- High ROF
 -- Ignites Target
--- 30% Increased Damage
+-- 20% Decreased Damage
 
 Attributes:
 Reinforcements (2)

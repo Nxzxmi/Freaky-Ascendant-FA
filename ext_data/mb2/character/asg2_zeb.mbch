@@ -4,7 +4,7 @@ ClassInfo
 {
 	name				"asg2_zeb"
 	weapons 			WP_E_22|WP_MELEE|WP_SABER|WP_CONC_NADE
-	attributes  		MB_ATT_WOOKIE_STRENGTH,2|MB_ATT_E_22,2|MB_ATT_BLAST_ARMOUR|MB_ATT_FP_SABER_DEFENSE,2|MB_ATT_GUN_DEFENSE,1|MB_ATT_MICRO_GRENADES,6|MB_aTT_AMMO,3
+	attributes  		MB_ATT_WOOKIE_STRENGTH,2|MB_ATT_E_22,2|MB_ATT_BLAST_ARMOUR|MB_ATT_FP_SABER_DEFENSE,2|MB_ATT_GUN_DEFENSE,1|MB_ATT_MICRO_GRENADES,6|MB_ATT_AMMO,3
 	maxhealth			300
 	maxarmor			100
 	modelscale  		1.15
@@ -22,7 +22,7 @@ ClassInfo
 	rateoffire_melee	1.05
 	skilltimermod 0.90
 	hackrate	0.95
-	sabermaxchain	2
+	sabermaxchain	3
 	
 	saber1		electrostaff_legends
 	sabercolor	5
@@ -45,7 +45,6 @@ ClassInfo
 	uioverlay_l	"gfx/icons/scout"
 	uioverlay_r "gfx/icons/brawler"
 	
-	meleeMoves M_UPPERCUT|M_BLOCK|M_FBKICK|M_JUMPKICK|M_KATA|M_KICK|M_LEGSWEEP|M_PUNCH|M_RLKICK
 }
 WeaponInfo0 
 {
@@ -92,7 +91,7 @@ A large but swift Wookiee / Melee / Gunner hybrid.
 -- Saber Defense (2)
 -- Gun Defense (1)
 -- 33 Saber Damage
--- 2 Chain Limit
+-- 3 Chain Limit
 -- Pulse Stun on Hit
 - 6 Smoke Grenades
 -- Based on Conc Nades
