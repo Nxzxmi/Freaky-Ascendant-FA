@@ -81,6 +81,7 @@ uishader_6  "models/players/clonetrooper_p1/mb2_icon_ordinance"
     c_att_skill_1   MB_ATT_CLONERIFLE
     c_att_names_1   "DC-15A Clone Rifle"
     c_att_ranks_1   5,0
+	c_att_descs_1	"10% more DMG,10% more velocity, 15% slower ROF"
 
     c_att_skill_2   MB_ATT_CLONEBLOBS
     c_att_names_2   "Concussion Blobs:"
@@ -93,14 +94,16 @@ uishader_6  "models/players/clonetrooper_p1/mb2_icon_ordinance"
     c_att_skill_4   MB_ATT_DLT20A
     c_att_names_4   "DC-15A Burst Configuration:"
     c_att_ranks_4   5,0
+	c_att_descs_4	"Sec. Fire only
+	10% less DMG,30% faster ROF,10% faster velocity"
 
-    c_att_skill_5   MB_ATT_T21
-    c_att_names_5   "DC-15LE Heavy Rifle:"
+    c_att_skill_5   MB_ATT_CR2
+    c_att_names_5   "DC-15LE Heavy Repeater:"
     c_att_ranks_5   5,0,0
-
+	c_att_descs_5 	"20% faster ROF,10% faster velocity"
     c_att_skill_6   MB_ATT_PULSE_GRENADES
     c_att_names_6   "Pulse Grenades:"
-    c_att_ranks_6   2,1,1
+    c_att_ranks_6   1,1,1
 
     c_att_skill_7   MB_ATT_QUICKTHROW 
     c_att_names_7   "Quickthrow ^3[CS3]:"
@@ -108,7 +111,8 @@ uishader_6  "models/players/clonetrooper_p1/mb2_icon_ordinance"
 
     c_att_skill_8	MB_ATT_RESPAWNS
 	c_att_names_8	"Reinforcements:"
-	c_att_ranks_8	1,1
+	c_att_ranks_8	2,2
+	c_att_descs_8 	"2 lives granted by default"
 
 }
 
@@ -125,12 +129,14 @@ WeaponInfo0
 	FlashSound0			"sound/weapsup/sup/wpn_rep_blaster_fire.wav"
 	Icon				"gfx/hud/w_icon_clonerifle"
 	WeaponName			"DC-15A Clone Rifle"
-	altfireenabled		1
+	damageMod			1.1
+	rateMod				1.15
+	velocityMod			1.1
 }
 WeaponInfo1
 {
-	WeaponToReplace		WP_T21
-	WeaponBasedOff		WP_T21
+	WeaponToReplace		WP_CR2
+	WeaponBasedOff		WP_CR2
 	NewWorldModel		"models/weapons2/dc-15a/dc-15a_w.glm"
 	NewViewModel		"models/weapons2/dc-15a/dc-15a.md3"
 	NewHandsModel        "models/weapons2/dc-15a/dc-15a_hand.md3"
@@ -139,15 +145,16 @@ WeaponInfo1
 	MissileEffect		"Blaster/Shot02B"
 	AltMissileEffect	"Blaster/Shot03B"
 	FlashSound0			"sound/weapsup/sup/wpn_rep_blaster_fire.wav"
+	FlashSound1		"sound/weapsup/sup/wpn_rep_blaster_fire.wav"
+	FlashSound2			"sound/weapsup/sup/wpn_rep_blaster_fire.wav"
+	FlashSound3			"sound/weapsup/sup/wpn_rep_blaster_fire.wav"
     AltFlashSound0      "sound/weapons/repeater/alt_fire_old.mp3"
 	Icon				"gfx/hud/w_icon_clonerifle"
-	WeaponName			"DC-15LE Heavy Rifle"
-	primFireEnabled		0
-	altfireenabled		1
-    rateMod             0.9
+	WeaponName			"DC-15LE Heavy Repeater"
+    rateMod             0.8
     velocityMod         1.1
-    CustomAmmo          800
-    clipsize            70
+    CustomAmmo          1200
+    clipsize            50
 }
 WeaponInfo2
 {
@@ -165,10 +172,12 @@ WeaponInfo2
 	Icon				"gfx/hud/w_icon_clonerifle"
 	WeaponName			"DC-15A Burst Config"
 	altfireenabled		1
-    CustomAmmo          750
-    clipsize            50
-    rateMod             0.9
+    CustomAmmo          900
+    clipsize            60
     velocityMod         1.1
+	rateMod				0.7
+	damageMod			0.9
+	primFireEnabled 0
 }
 
 description	"Clone Trooper (Phase I)
@@ -193,13 +202,4 @@ A Phase I Clone Trooper built for sustained frontline combat. Slow and dangerous
 
 ^3Default Abilities:
 - Sprint ^3[CS1]
-- Quickthrow ^3[CS3]
-
-^9Point Buy Info:
-- DC-15 Clone Rifle
-- Concussion Blobs
-- Ion Blobs
-- DC-15LE Heavy Rifle (T-21 no primary)
--- 10% faster ROF and 10% faster projectile velocity
-- DC-15 Burst Configuration (DLT20A)
--- 10% faster ROF and projectile velocity"
+- Quickthrow ^3[CS3]"
