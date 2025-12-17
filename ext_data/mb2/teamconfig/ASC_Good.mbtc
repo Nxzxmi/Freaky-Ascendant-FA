@@ -20,7 +20,7 @@ SubclassesForClass1
 	Subclass2	"asg1_RebelET"
 	Subclass3	"asg1_SecurET"
 	Subclass4	"h1_OldRepET"
-	subclass5 	"h1_TORtroop"
+	Subclass5 	"h1_TORtroop"
 	Subclass6	"h1_Talz"
 	Subclass7	"asg2_Padme" 
 	Subclass8	"h2_JarJar" 
