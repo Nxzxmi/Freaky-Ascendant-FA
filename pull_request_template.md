@@ -1,9 +1,9 @@
 <!--if you want these changes in official legends, make a PR in the mbii/textassets repo -->
 
 ## Short description
-<!-- what is being changed/added/removed/etc with your PR? -->
+<!-- what is being changed/added/removed/etc with your PR? factual statements go here, describe what it does -->
 
-## Why we need to add this
+## What is your vision for this? 
 <!-- what is the reason for adding these changes? feel free to link/mention discussions. describe how this will change the game balance. -->
 
 ## Media (Video/Screenshots/OPTIONAL)
