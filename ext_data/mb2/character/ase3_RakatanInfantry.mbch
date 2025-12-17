@@ -119,8 +119,8 @@ c_att_descs_19	"^3[CS3]"
 c_att_skill_21	MB_ATT_PISTOL
 c_att_ranks_21	0
 c_att_names_21	"Lightning Zap (Pistol)"
-c_att_descs_21	"^7-10% Velocity, 700% Longer Reload, +40% FP DMG, +40% DMG,
-100% Slower RoF"
+c_att_descs_21	"^7900% Longer Reload, +80% FP DMG, +80% DMG,
+550% Slower RoF"
 c_att_skill_22	MB_ATT_REPEATER
 c_att_ranks_22	0
 c_att_names_22	"Lightning Blast (Repeater)"
@@ -149,11 +149,11 @@ MissileMissEffect "SBD/Cortosis_blue"
 FlashSound0 "sound/weapons/force/lightning.wav"	
 Clipsize	10
 customAmmo 150
-rateMod 2
-damageMod 1.4
-velocityMod	.9
-reloadTimeModifier 7
-FPMult 1.4
+rateMod 5.5
+damageMod 1.8
+velocityMod	1
+reloadTimeModifier 9
+FPMult 1.8
 hasAnimOverrides 1
 firingAnim	BOTH_FORCE_DRAIN_GRAB_HOLD
 AnimStand BOTH_FORCE_2HANDEDLIGHTNING_RELEASE
@@ -270,4 +270,5 @@ A Rakatan soldier hailing from the Infinite Empire era with front and backline o
 - Assemble (2)
 - Strength (1)
 - Fury (2)
+
 - 300% Longer Skill CD"
