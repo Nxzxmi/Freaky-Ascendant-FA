@@ -9,16 +9,16 @@ ClassInfo
 	
 	weapons			WP_SABER|WP_MELEE
 	
-	attributes		MB_ATT_FORCEFOCUS,1|MB_ATT_HEALING,2|MB_ATT_DEFLECT,1|MB_ATT_GUN_DEFENSE,1|MB_ATT_WOOKIE_STRENGTH,3
+	attributes		MB_ATT_FORCEFOCUS,1|MB_ATT_HEALING,2|MB_ATT_DEFLECT,1|MB_ATT_GUN_DEFENSE,1|MB_ATT_WOOKIE_STRENGTH,3|MB_ATT_FP_SABER_DEFENSE,1|MB_ATT_BLAST_ARMOR
 	
 	forcepowers		FP_LEVITATION,1|FP_PULL,2|FP_TEAM_FORCE,1|FP_SEE,2|FP_GRIP,3
 	
-	classflags CFL_NOPICKUPS
+	classflags 		CFL_NOPICKUPS|CFL_BLOODYMELEE|CFL_STRONGAGAINSTPHYSICAL|CFL_NOLOCATIONALDAMAGE
 	maxhealth 		225
-	maxarmor		120
+	maxarmor		80
 	forcepool 		110
 	forceregen   	0.9
-	damagetaken		0.8
+	damagetaken		0.7
 	asmultiplier	0.8
 
 	saberstyle	SS_TAVION|SS_DESANN
@@ -27,11 +27,12 @@ ClassInfo
 	uishader		"models/players/gorc/icon_default"	
 	uioverlay 	"gfx/icons/frontline"
 	modelscale 	1.44
-	speed       	0.77
+	speed       	0.84
 	damageGiven  	1.4
 	apmultiplier	1.8
 	rateoffire_melee	1.4
 	saberdamage			144
+	wp_meleeflags	HELD_SPEED
 	
 	gloatAnim BOTH_HEADSHAKE
 	
@@ -51,9 +52,10 @@ An oversized Dark Jedi with a Lightsaber to match, moves slowly but hits hard.
 ^2Weaponry:
 - Melee
 -- 40% Slow ROF
+-- Faster Movement Speed
 - Lightsaber Club
 -- Purple / Cyan Styles
--- Blaster Defense (1)
+-- Saber/Blaster Defense (1)
 -- Saber Deflect (1)
 -- Very High Reach
 -- Slap ^3[CS2]
@@ -69,4 +71,7 @@ An oversized Dark Jedi with a Lightsaber to match, moves slowly but hits hard.
 ^8Attributes:
 - Healing (2)
 - Force Focus (1)
-- Strength (3)"
+- Strength (3)
+- Blast Armor
+- Resistent to Melee
+- No Locational Damage"
