@@ -6,7 +6,8 @@ saber_gorc_legends
 	soundOn		"sound/weapons/saber/saberonquick.wav"
 	soundLoop	"sound/weapons/saber/saberhum3.wav"
 	soundOff	"sound/weapons/saber/saberoffquick.wav"
-	saberLength 	60
+	saberLength 	69
+	saberwidth		4
 	saberColor  	orange
 	throwable	0
 	gloatAnim  	BOTH_HEADSHAKE
