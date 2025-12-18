@@ -5,8 +5,8 @@ MBClass MB_CLASS_ELITETROOPER
 classNumberLimit 2
 extralives 1
 
-weapons WP_MELEE|WP_BLASTER_PISTOL|WP_CR2|WP_M5|WP_DET_PACK|WP_PULSE_NADE|WP_TRIP_MINE
-attributes MB_ATT_PISTOL,2|MB_ATT_CR2,2|MB_ATT_DET_PACK,3|MB_ATT_TRIP_MINES,1|MB_ATT_ARC_RIFLE_GRENADELAUNCHER,2|MB_ATT_AMMO,3|MB_ATT_ASSEMBLE,2|MB_ATT_TRACKING_BEACON|MB_ATT_DEXTERITY,1
+weapons WP_MELEE|WP_BLASTER_PISTOL|WP_CR2|WP_M5|WP_DET_PACK|WP_PULSE_NADE
+attributes MB_ATT_PISTOL,2|MB_ATT_CR2,2|MB_ATT_DET_PACK,3|MB_ATT_ARC_RIFLE_GRENADELAUNCHER,2|MB_ATT_AMMO,3|MB_ATT_ASSEMBLE,2|MB_ATT_TRACKING_BEACON|MB_ATT_DEXTERITY,1
 
 forcepowers FP_LIGHTNING,1|FP_SEE,1|FP_PULL,1
 holdables HI_SEEKER|HI_STIMPACK
@@ -28,7 +28,7 @@ armourRegenRate 1000
 armourRegenCap  20
 
 basespeed 218
-damageTaken 0.95
+damageTaken 1
 
 hackRate 0.86
 knockbackTaken 1.1
@@ -81,7 +81,7 @@ MuzzleEffect "Blaster/MuzzleFlash01R"
 MissileEffect "Blaster/Shot02R"
 damageMod 0.85
 velocityMod 1.10
-customAmmo 420
+customAmmo 360
 clipSize 60
 }
 
@@ -102,7 +102,7 @@ hasAnimOverrides 1
 animAttackRun BOTH_MAND_FLAME_READY
 animAttack BOTH_MAND_FLAME_READY
 animAttackWalk BOTH_MAND_FLAME_READY
-rateMod 0.75
+rateMod 0.50
 }
 
 WeaponInfo3
@@ -165,10 +165,9 @@ description "Rebel Sapper [Elite Trooper]
 - Pulse Grenade Launcher (M5)
 -- 65% faster RoF
 -- Sec. only
-- Trip Mine (1)
 - Pulse Grenades (2)
 - Det Packs (3)
--- 25% faster RoF
+-- 50% faster RoF
 
 ^5Powers:
 - Magnet Glove (Pull 1)
