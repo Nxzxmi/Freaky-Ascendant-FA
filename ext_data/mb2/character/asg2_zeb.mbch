@@ -34,6 +34,7 @@ ClassInfo
 	
 	WP_SaberFlags HELD_PULSE
 	WP_ConcNadeFlags	HELD_LOWDAMAGE
+	WP_E22Flags		HELD_ALTRELOAD
 	
 	respawncustomtime 75000
 	
@@ -77,6 +78,27 @@ WeaponInfo0
     damagemod 0.001
 	customammo	6
 }
+weaponinfo1
+{
+	WeaponToReplace WP_E_22
+	WeaponBasedOff WP_E_22
+	NewWorldModel	"models/weapons2/e_22/e_22_w.glm"
+	NewViewModel	"models/weapons2/e_22/e_22.md3"
+	NewHandsModel	"models/weapons2/e_22/e_22_hand.md3"
+	Icon	"gfx/hud/w_icon_e_22"
+	WeaponName	"Modified E-22"
+	MuzzleEffect	"Blaster/MuzzleFlash01R"
+	AltMuzzleEffect	"Blaster/MuzzleFlash01R"
+	MissileEffect	"Blaster/Shot09R"
+	altMissileEffect	"Blaster/Shot12R"
+	FlashSound0	"sound/weapons/e_22/fire.mp3"
+	altFlashSound0	"sound/weapons/e_22/alt_fire.mp3"
+	customammo	999
+	velocityMod	1.45
+	rateMod 1.2
+	damageMod	1.3
+	FpMult	1.12
+	}
 
 description	"Garazeb ''Zeb'' Orrelios [Wookiee]
 
@@ -86,6 +108,11 @@ A large but swift Wookiee / Melee / Gunner hybrid.
 - Wookiee-style Melee
 - 5% Faster Swings
 - E-22 Blaster
+-- 45% Increased Velocity
+-- 20% Slower ROF
+-- 30% Increased Damage
+-- 12% Increased FP Damage
+-- Alt Reload
 - Electro Staff
 -- Staff Style Only
 -- Saber Defense (2)
