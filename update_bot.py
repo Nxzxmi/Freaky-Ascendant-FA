@@ -1,18 +1,20 @@
-# bot.py - Freaky Ascendant Deployment Bot
-
 import discord
 from discord.ext import commands
 from github import Github
 import zipfile
 import os
-import paramiko
 import subprocess
+import platform
 from datetime import datetime, timezone
 import time
 import asyncio
 from dotenv import load_dotenv
 
 load_dotenv(dotenv_path='config.env')
+
+# Detect operating system
+IS_WINDOWS = platform.system() == 'Windows'
+IS_UNIX = platform.system() in ('Linux', 'Darwin')  # Linux or macOS
 
 # ============= CONFIGURATION =============
 class Config:
@@ -35,23 +37,14 @@ class Config:
         MOD_SOURCE_FOLDER = os.getenv('MOD_SOURCE_FOLDER') or "./repo_clone"
     
     # Static file names (never change)
-    PK3_NAME = "zzz_FreakyAscendantFA.pk3"
+    PK3_NAME = os.getenv('PK3_NAME')
     RELEASE_ZIP_NAME = "release.zip"
-    
-    # Server upload
-    SFTP_TOGGLE = os.getenv('SFTP_TOGGLE', '0').lower() in ('1', 'true', 'yes')
-    SERVER_HOST = os.getenv('SERVER_HOST')
-    SERVER_PORT = 22
-    SERVER_USER = os.getenv('SERVER_USER')
-    SERVER_PASS = os.getenv('SERVER_PASS')
-    SERVER_PATH = "/the/path/here/"
 
     # Optional: restrict deploy command to one or more role IDs (comma-separated)
     # Example: DEPLOY_ROLE_ID=123456789012345678 or DEPLOY_ROLE_ID=123,456
     DEPLOY_ROLE_ID = os.getenv('DEPLOY_ROLE_ID')
-    # Optional commands to run on the server to stop/start the game server process.
-    # If SERVER_HOST is configured, these will be executed via SSH on the remote host;
-    # if SERVER_HOST is empty, they will be executed locally (useful when the bot runs on the server).
+
+    # Optional commands to run locally to stop/start the game server process
     # Stop command runs from the bot's current directory.
     # Examples:
     # SERVER_STOP_CMD=taskkill /IM mbiided.x86.exe /F
@@ -196,7 +189,6 @@ def ensure_repo_on_main():
     print(f"✓ Repository updated from {Config.BRANCH}")
 
 def create_pk3(source_folder):
-    """Create zzz_FreakyAscendantFA.pk3 from source"""
     pk3_path = Config.PK3_NAME
 
     if os.path.exists(pk3_path):
@@ -357,44 +349,19 @@ def create_github_release(tag, release_zip):
     return release
 
 
-def _run_command_on_server(cmd, timeout=30, cwd=None):
-    """Run a command either remotely via SSH (when SERVER_HOST configured) or locally.
+def _run_local_command(cmd, timeout=30, cwd=None):
+    """Run a command locally.
 
     Args:
         cmd: The command to run
         timeout: Timeout in seconds (default 30)
-        cwd: Working directory for local commands (default None = current directory)
+        cwd: Working directory (default None = current directory)
 
     Returns: (exit_code, stdout, stderr)
     """
     if not cmd:
         return 0, "", ""
 
-    # If SERVER_HOST provided, run the command over SSH
-    if Config.SERVER_HOST:
-        ssh = paramiko.SSHClient()
-        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        try:
-            ssh.connect(
-                hostname=Config.SERVER_HOST,
-                port=Config.SERVER_PORT,
-                username=Config.SERVER_USER,
-                password=Config.SERVER_PASS,
-                timeout=30
-            )
-
-            stdin, stdout, stderr = ssh.exec_command(cmd)
-            exit_code = stdout.channel.recv_exit_status()
-            out = stdout.read().decode('utf-8', errors='replace')
-            err = stderr.read().decode('utf-8', errors='replace')
-            return exit_code, out, err
-        finally:
-            try:
-                ssh.close()
-            except Exception:
-                pass
-
-    # Otherwise run locally with timeout
     try:
         # Use provided working directory if specified
         if cwd:
@@ -405,51 +372,6 @@ def _run_command_on_server(cmd, timeout=30, cwd=None):
         # Command timed out - assume it succeeded and moved to background
         print(f"Command timed out after {timeout}s, assuming success and continuing...")
         return 0, "", f"Command timed out after {timeout}s"
-
-def upload_to_server(pk3_file):
-    """Upload pk3 to game server via SFTP"""
-    print(f"Connecting to {Config.SERVER_HOST}...")
-    
-    ssh = paramiko.SSHClient()
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    
-    try:
-        ssh.connect(
-            hostname=Config.SERVER_HOST,
-            port=Config.SERVER_PORT,
-            username=Config.SERVER_USER,
-            password=Config.SERVER_PASS,
-            timeout=30
-        )
-        
-        sftp = ssh.open_sftp()
-        
-        remote_file = os.path.join(Config.SERVER_PATH, Config.PK3_NAME)
-        file_size = os.path.getsize(pk3_file)
-        
-        print(f"Uploading {Config.PK3_NAME} ({file_size / (1024*1024):.2f} MB)...")
-        
-        uploaded = [0]
-        def progress(transferred, total):
-            uploaded[0] = transferred
-            percent = (transferred / total) * 100
-            if transferred == total or int(percent) % 10 == 0:
-                print(f"\rProgress: {percent:.1f}%", end='')
-        
-        sftp.put(pk3_file, remote_file, callback=progress)
-        print()  # Newline after progress
-        
-        # Verify upload
-        remote_stat = sftp.stat(remote_file)
-        if remote_stat.st_size == file_size:
-            print(f"✓ Verified: {remote_file}")
-        else:
-            raise Exception(f"Upload verification failed! Local: {file_size}, Remote: {remote_stat.st_size}")
-        
-        sftp.close()
-        
-    finally:
-        ssh.close()
 
 def copy_to_mbii_dir(pk3_file):
     """Copy the PK3 file to local MBII installation directory"""
@@ -479,10 +401,6 @@ def copy_to_mbii_dir(pk3_file):
 @bot.command()
 @commands.check(_check_deploy_role)
 async def deploy(ctx, tag: str):
-    """
-    Deploy Freaky Ascendant with specified version tag
-    Usage: !deploy v1.0.0
-    """
     # Validate tag format (optional but recommended)
     if not tag.startswith('v'):
         await ctx.send(f"⚠️ Tag should start with 'v' (e.g., v1.0.0). Proceeding with `{tag}`...")
@@ -504,7 +422,7 @@ async def deploy(ctx, tag: str):
 
     # Create status embed
     embed = discord.Embed(
-        title="🚀 Deploying Freaky Ascendant",
+        title="🚀 Deploying Assets",
         description=f"Version: `{tag}` | Branch: `{Config.BRANCH}`",
         color=discord.Color.blue(),
         timestamp=datetime.now(timezone.utc)
@@ -516,8 +434,6 @@ async def deploy(ctx, tag: str):
     try:
         # Determine total steps based on what's enabled
         total_steps = 4  # Always: pull, pk3, release.zip, github
-        if Config.SFTP_TOGGLE:
-            total_steps += 1  # SFTP upload
         if Config.SERVER_STOP_CMD or Config.MBII_DIR or Config.SERVER_START_CMD:
             total_steps += 1  # Server operations (stop/transfer/start combined)
 
@@ -555,19 +471,6 @@ async def deploy(ctx, tag: str):
         embed.set_field_at(-1, name=f"✅ Step {current_step}/{total_steps}", value=f"Release published: [Link]({release.html_url})", inline=False)
         await status_msg.edit(embed=embed)
 
-        # Step 5: Upload to server (only if SFTP enabled)
-        if Config.SFTP_TOGGLE:
-            current_step += 1
-            if Config.SERVER_HOST or Config.SERVER_PATH:
-                embed.add_field(name=f"🌐 Step {current_step}/{total_steps}", value="Uploading to game server...", inline=False)
-                await status_msg.edit(embed=embed)
-                upload_to_server(pk3_file)
-                embed.set_field_at(-1, name=f"✅ Step {current_step}/{total_steps}", value="Upload complete", inline=False)
-                await status_msg.edit(embed=embed)
-            else:
-                embed.add_field(name=f"ℹ️ Step {current_step}/{total_steps}", value="Upload skipped (no SERVER_HOST/SERVER_PATH configured)", inline=False)
-                await status_msg.edit(embed=embed)
-
         # Combined server operations step (stop/transfer/start)
         if Config.SERVER_STOP_CMD or Config.MBII_DIR or Config.SERVER_START_CMD:
             current_step += 1
@@ -576,7 +479,7 @@ async def deploy(ctx, tag: str):
             if Config.SERVER_STOP_CMD:
                 embed.add_field(name=f"⏹️ Step {current_step}/{total_steps}", value="Stopping server process...", inline=False)
                 await status_msg.edit(embed=embed)
-                code, out, err = _run_command_on_server(Config.SERVER_STOP_CMD, timeout=5)
+                code, out, err = _run_local_command(Config.SERVER_STOP_CMD, timeout=5)
                 if code != 0:
                     # Don't fail deployment if stop fails (server might already be stopped)
                     print(f"Warning: Stop command returned exit code {code}")
@@ -596,7 +499,7 @@ async def deploy(ctx, tag: str):
                     verified = False
                     timeout = max(1, Config.SERVER_START_DELAY)
                     while time.time() - start < timeout:
-                        v_code, v_out, v_err = _run_command_on_server(Config.SERVER_STOP_VERIFY_CMD)
+                        v_code, v_out, v_err = _run_local_command(Config.SERVER_STOP_VERIFY_CMD)
                         if v_code == 0:
                             verified = True
                             break
@@ -628,17 +531,14 @@ async def deploy(ctx, tag: str):
                 embed.set_field_at(-1, name=f"▶️ Step {current_step}/{total_steps}", value="Starting server...", inline=False)
                 await status_msg.edit(embed=embed)
 
-                # For local commands, launch completely detached from this process
-                if not Config.SERVER_HOST:
-                    # Use Windows 'start' command to open in new console window
-                    # This ensures the batch file and any Python scripts it runs get their own window
-                    cwd = Config.START_CMD_DIR if Config.START_CMD_DIR else None
-                    if cwd:
-                        print(f"Running start command in directory: {cwd}")
+                cwd = Config.START_CMD_DIR if Config.START_CMD_DIR else None
+                if cwd:
+                    print(f"Running start command in directory: {cwd}")
 
-                    try:
-                        # Use 'start' command with /D to set directory and run in new window
-                        # This ensures complete separation and proper console window
+                try:
+                    if IS_WINDOWS:
+                        # Windows: Use 'start' command to open in new console window
+                        # This ensures the batch file and any Python scripts it runs get their own window
                         if cwd:
                             # If we have a working directory, use /D flag
                             cmd = f'start /D "{cwd}" "" {Config.SERVER_START_CMD}'
@@ -665,15 +565,41 @@ async def deploy(ctx, tag: str):
                             env=clean_env  # Clean environment without bot credentials
                         )
                         print(f"✓ Started server process in new console window with clean environment")
-                    except Exception as e:
-                        print(f"Warning: Error starting server: {e}")
-                else:
-                    # For remote commands, use SSH as before
-                    code, out, err = _run_command_on_server(Config.SERVER_START_CMD, timeout=5, cwd=Config.START_CMD_DIR)
-                    if code != 0:
-                        print(f"Warning: Start command returned exit code {code}")
-                        print(f"STDOUT: {out}")
-                        print(f"STDERR: {err}")
+
+                    elif IS_UNIX:
+                        # Unix/Linux: Use nohup to run in background and detach from terminal
+                        # Make the script executable if it isn't already
+                        script_path = os.path.join(cwd, Config.SERVER_START_CMD) if cwd else Config.SERVER_START_CMD
+                        if os.path.exists(script_path):
+                            os.chmod(script_path, 0o755)
+
+                        # Create minimal clean environment
+                        clean_env = {
+                            'PATH': os.environ.get('PATH', '/usr/local/bin:/usr/bin:/bin'),
+                            'HOME': os.environ.get('HOME', ''),
+                            'USER': os.environ.get('USER', ''),
+                            'SHELL': os.environ.get('SHELL', '/bin/bash'),
+                            'TMPDIR': os.environ.get('TMPDIR', '/tmp'),
+                        }
+
+                        # Use nohup to run in background, redirect output to log file
+                        cmd = f'nohup {Config.SERVER_START_CMD} > server_start.log 2>&1 &'
+
+                        subprocess.Popen(
+                            cmd,
+                            shell=True,
+                            cwd=cwd if cwd else None,
+                            env=clean_env,
+                            start_new_session=True  # Detach from current process group
+                        )
+                        print(f"✓ Started server process in background with clean environment")
+
+                    else:
+                        print(f"Warning: Unsupported OS: {platform.system()}")
+                        raise Exception(f"Unsupported operating system: {platform.system()}")
+
+                except Exception as e:
+                    print(f"Warning: Error starting server: {e}")
 
                 # Verify start if a verify command is provided
                 if Config.SERVER_START_VERIFY_CMD:
@@ -684,7 +610,7 @@ async def deploy(ctx, tag: str):
                     verified = False
                     timeout = max(15, Config.SERVER_START_DELAY)  # At least 15 seconds to verify
                     while time.time() - start < timeout:
-                        v_code, v_out, v_err = _run_command_on_server(Config.SERVER_START_VERIFY_CMD, timeout=5)
+                        v_code, v_out, v_err = _run_local_command(Config.SERVER_START_VERIFY_CMD, timeout=5)
                         if v_code == 0:
                             verified = True
                             break
@@ -744,7 +670,7 @@ async def status(ctx):
         releases = list(repo.get_releases())
         
         embed = discord.Embed(
-            title="📊 Freaky Ascendant Status",
+            title="📊 Release Status",
             color=discord.Color.blue()
         )
         
@@ -779,7 +705,7 @@ async def status(ctx):
 async def help_deploy(ctx):
     """Show deployment help"""
     embed = discord.Embed(
-        title="🤖 Freaky Ascendant Deploy Bot",
+        title="🤖 Release Deployment Bot",
         description="Automated deployment from GitHub to your game server",
         color=discord.Color.blue()
     )
@@ -840,7 +766,7 @@ if __name__ == "__main__":
         exit(1)
     
     print("=" * 60)
-    print("Freaky Ascendant Deployment Bot")
+    print("Release Deployment Bot")
     print("=" * 60)
     print(f"Repository: {Config.GITHUB_REPO}")
     print(f"Branch:     {Config.BRANCH}")
