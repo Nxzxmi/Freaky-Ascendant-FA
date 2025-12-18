@@ -15,7 +15,7 @@ if your PR contains visible in-game changes you can provide screenshots/videos o
 <!-- check boxes for faster reviewing of your PR 
 replace the space in the brackets with X to place a checkmark-->
 
-- [ ] changes were tested and behave as intended
+- [ ] changes were tested before posting
 - [ ] file structure, naming, and formatting follow project conventions
 
 **Changelog**
