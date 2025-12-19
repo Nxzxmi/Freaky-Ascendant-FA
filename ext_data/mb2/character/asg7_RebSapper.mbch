@@ -147,6 +147,8 @@ ForceInfo2
 ForceToReplace FP_PULL
 Icon "gfx/forcepowers/push"
 ForcePowerName "Magnet Glove"
+HandShader "gfx/effects/dekashield2"
+StartSound "sound/force/magnetpull.mp3"
 }
 
 description "Rebel Sapper [Elite Trooper]
