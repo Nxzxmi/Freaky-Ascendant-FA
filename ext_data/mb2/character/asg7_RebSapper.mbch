@@ -27,7 +27,7 @@ armourRegenAmount 2
 armourRegenRate 1000
 armourRegenCap  20
 
-basespeed 218
+basespeed 215
 damageTaken 1
 
 hackRate 0.86
