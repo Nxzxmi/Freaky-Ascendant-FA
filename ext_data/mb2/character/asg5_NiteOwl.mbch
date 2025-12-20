@@ -52,7 +52,7 @@ customSpecDesc_2 ""
 c_att_skill_0 MB_ATT_CLONERIFLE
 c_att_names_0 "Concord. Repeater (C. Rifle)"
 c_att_ranks_0 3
-c_att_descs_0 "20% more DMG,10% more FP DMG,10% more velocity,50% more RoF"
+c_att_descs_0 "10% more FP DMG,10% more velocity,50% more RoF"
 c_att_skill_1 MB_ATT_DLT20A
 c_att_names_1 "GALAAR-15 Carbine (DLT)"
 c_att_ranks_1 1,2,0
@@ -155,7 +155,6 @@ FPMult 1.1
 ReloadTimeModifier 51
 rateMod 0.5
 velocityMod 1.1
-damageMod 1.2
 }
 WeaponInfo3{
 WeaponToReplace WP_PROJ
