@@ -7,6 +7,7 @@ forcepowers FP_LEVITATION,3|FP_SEE,3|FP_PUSH,2|FP_PULL,3|FP_PROTECT,2|FP_ABSORB,
 attributes MB_ATT_FORCEBLOCK,3|MB_ATT_FORCEFOCUS,3|MB_ATT_FP_REPULSE,1|MB_ATT_FLIPKICK,1|MB_ATT_SPY_DISGUISE,2|MB_ATT_FP_SABER_DEFENSE,0|MB_ATT_DASH_JUMP|MB_ATT_DASH,1|MB_ATT_DEXTERITY,3|MB_ATT_THROWER_ICE|MB_ATT_RECHARGE,3|MB_ATT_HEALING,3
 forcepool 110
 resource resource_battery
+forceregen 1.1
 resourceRegenAmount 4
 resourceRegenRate 600
 maxhealth 140
@@ -104,7 +105,7 @@ c_att_ranks_19 5
 c_att_skill_20 MB_ATT_CLONE_PISTOL
 c_att_names_20 "Lightning Bolts:"
 c_att_ranks_20 8,0,0
-c_att_skill_21 MB_ATT_ROCKET_LAUNCHER
+c_att_skill_21 MB_ATT_PLX1
 c_att_names_21 "Force Blast:"
 c_att_ranks_21 6
 c_att_skill_22 MB_ATT_DEFLECT
@@ -120,10 +121,10 @@ c_att_ranks_31 1,2
 c_att_skill_32 MB_ATT_LIGHTS_BEACON
 c_att_names_32 "Light's Beacon:"
 c_att_ranks_32 1
-c_att_skill_33 MB_ATT_DC_CARBINE
+c_att_skill_33 WP_ROCKET_LAUNCHER
 c_att_names_33 "Healing Burst (Sec. Fire):"
-c_att_ranks_33 3,0,0
-c_att_skill_34 MB_ATT_ROCKET_LAUNCHER
+c_att_ranks_33 3
+c_att_skill_34 MB_ATT_PLX1
 c_att_names_34 "Force Blast:"
 c_att_ranks_34 8
 c_att_skill_35 MB_ATT_THROWER
@@ -162,8 +163,8 @@ WeaponName "Martial Arts"
 }
 WeaponInfo1
 {
-WeaponToReplace WP_ROCKET_LAUNCHER
-WeaponBasedOff WP_ROCKET_LAUNCHER
+WeaponToReplace WP_PLX1
+WeaponBasedOff WP_PLX1
 NewWorldModel "models/weapons2/dummyblaster/model.glm"
 NewViewModel "models/weapons2/dummy/dummy.md3"
 MuzzleEffect "gfx/effects/forceflare"
@@ -181,7 +182,8 @@ Icon "gfx/marvel/vamp"
 WeaponName "Force Blasts"
 clipSize 1
 CustomAmmo 14
-velocityMod 0.8
+velocityMod 0.5
+damageMod 0.5
 ReloadTimeModifier 2 }
 WeaponInfo2
 {
@@ -230,8 +232,8 @@ animStand BOTH_STAND9
 ReloadTimeModifier 2 }
 WeaponInfo4
 {
-WeaponToReplace WP_DC_CARBINE
-WeaponBasedOff WP_DC_CARBINE
+WeaponToReplace WP_ROCKET_LAUNCHER
+WeaponBasedOff WP_ROCKET_LAUNCHER
 NewWorldModel "models/weapons2/dummyblaster/model.glm"
 NewViewModel "models/weapons2/noweap/noweap.md3"
 MissileMissEffect "grenade_heal/explosion"
@@ -246,7 +248,7 @@ altMuzzleEffect "gfx/effects/forceflare"
 altMissileEffect "Force/inv_wave"
 DamageMod -2
 rateMod 2
-CustomAmmo 500
+CustomAmmo 50
 primFireEnabled 0
 hasAnimOverrides 1
 animReady BOTH_FORCE_2HANDEDLIGHTNING_START
