@@ -42,9 +42,7 @@ ClassInfo
 	gloatAnim BOTH_SHOWOFF_STRONG
 	saberstanceAnim BOTH_SPEAR_STANCE
 	
-	special2 EAS_FP_REPULSE
-	special3 EAS_FP_GRIP
-	special4 EAS_FP_LIGHTNING
+	special3 EAS_FP_REPULSE
 
 isCustomBuild	1
 mbPoints	8
@@ -63,11 +61,11 @@ mbPoints	8
 	c_att_ranks_2	0,1
 	
 	c_att_skill_3	MB_ATT_FP_GRIP
-	c_att_names_3	"Force Grip ^3[CS3]"
+	c_att_names_3	"Force Grip"
 	c_att_ranks_3	1,0
 
 	c_att_skill_4	MB_ATT_FP_LIGHTNING
-	c_att_names_4	"Force Lightning ^3[CS4]"
+	c_att_names_4	"Force Lightning"
 	c_att_ranks_4	1,0
 	
 	c_att_skill_5	MB_ATT_FP_SABER_DEFENSE
@@ -129,10 +127,11 @@ Highly mobile saberists that can choose between a versatile one-life or speciali
 - Jump (3)
 - Speed (2)
 - Push (1)
-- Repulse ^3[CS2]
+- Repulse ^3[CS3]
 
 ^8Attributes:
 - Dexterity (3)
 - Healing (1)
 - Force Block/Focus (2)"
+
 
