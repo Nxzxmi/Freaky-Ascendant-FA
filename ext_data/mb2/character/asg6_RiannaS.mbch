@@ -246,13 +246,13 @@ High DMG melee moves along with droid support and high volume, low DMG weaponry.
 -- 15% less DMG
 -- 15% more velocity
 
-Inventory:
+^6Inventory:
 - Kolto (50 HP over time)
 - Bacta (Instant 50 HP)
 - Electrobinoculars
 - Seeker Droid
 
-Attributes:
+^5Attributes:
 - 30% slower skill CD
 - 20% more KB taken
 - Bunny Hop (2)
@@ -266,7 +266,7 @@ Attributes:
 -- Water Breathing
 -- Database Sharing (Tracking Beacon)
 
-Abilities:
+^8Abilities:
 - Holoprojector (Disguise 2) ^3[Toggle Melee]
 - Dodge (3) ^3(CS1)
 - Gunkick (Hammer of Ryloth) ^3(CS2)
