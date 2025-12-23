@@ -1,0 +1,32 @@
+{
+  "discord": {
+    "bot_token": "your_discord_bot_token_here"
+  },
+  "github": {
+    "token": "your_github_personal_access_token_here",
+    "repo": "owner/repo",
+    "branch": "main"
+  },
+  "repository": {
+    "use_rwd": false,
+    "local_repo_path": "./repo_clone",
+    "mod_source_folder": ""
+  },
+  "build": {
+    "pk3_name": "example.pk3"
+  },
+  "deploy": {
+    "role_ids": []
+  },
+  "server": {
+    "stop_cmd": "",
+    "start_cmd": "",
+    "stop_verify_cmd": "",
+    "start_verify_cmd": "",
+    "start_cmd_dir": "",
+    "start_delay": 0
+  },
+  "mbii": {
+    "dir": ""
+  }
+}

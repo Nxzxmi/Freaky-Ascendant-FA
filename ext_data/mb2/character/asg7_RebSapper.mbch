@@ -5,10 +5,10 @@ MBClass MB_CLASS_ELITETROOPER
 classNumberLimit 2
 extralives 1
 
-weapons WP_MELEE|WP_BLASTER_PISTOL|WP_CR2|WP_M5|WP_DET_PACK|WP_PULSE_NADE|WP_TRIP_MINE
-attributes MB_ATT_PISTOL,2|MB_ATT_CR2,2|MB_ATT_DET_PACK,3|MB_ATT_TRIP_MINES,1|MB_ATT_ARC_RIFLE_GRENADELAUNCHER,2|MB_ATT_AMMO,3|MB_ATT_ASSEMBLE,2|MB_ATT_TRACKING_BEACON|MB_ATT_DEXTERITY,1
+weapons WP_MELEE|WP_BLASTER_PISTOL|WP_CR2|WP_M5|WP_DET_PACK|WP_PULSE_NADE
+attributes MB_ATT_PISTOL,2|MB_ATT_CR2,2|MB_ATT_DET_PACK,3|MB_ATT_ARC_RIFLE_GRENADELAUNCHER,2|MB_ATT_AMMO,3|MB_ATT_ASSEMBLE,2|MB_ATT_TRACKING_BEACON|MB_ATT_DEXTERITY,1
 
-forcepowers FP_LIGHTNING,1|FP_SEE,1|FP_PULL,1
+forcepowers FP_LIGHTNING,1|FP_PULL,1
 holdables HI_SEEKER|HI_STIMPACK
 
 resource RESOURCE_FUEL
@@ -27,14 +27,14 @@ armourRegenAmount 2
 armourRegenRate 1000
 armourRegenCap  20
 
-basespeed 218
+basespeed 215
 damageTaken 0.95
 
 hackRate 0.86
 knockbackTaken 1.1
 
 damageGiven 1.3 //IMPORTANT: This is to increase lightning and detpack damage by 30%. Set all other weapons' damageMod to the inverse, 1/damageGiven. (1/1.3 = 0.77)
-WP_MeleeFlags HELD_LOWDAMAGE
+WP_MeleeFlags HELD_LOWDAMAGE|HELD_TRACKING
 rateOfFire_Melee    .8
 
 modelscale 1.02
@@ -81,7 +81,7 @@ MuzzleEffect "Blaster/MuzzleFlash01R"
 MissileEffect "Blaster/Shot02R"
 damageMod 0.85
 velocityMod 1.10
-customAmmo 420
+customAmmo 360
 clipSize 60
 }
 
@@ -102,7 +102,7 @@ hasAnimOverrides 1
 animAttackRun BOTH_MAND_FLAME_READY
 animAttack BOTH_MAND_FLAME_READY
 animAttackWalk BOTH_MAND_FLAME_READY
-rateMod 0.75
+rateMod 0.60
 }
 
 WeaponInfo3
@@ -135,18 +135,11 @@ LoopSound null
 
 ForceInfo1
 {
-ForceToReplace FP_SEE
-Icon "gfx/forcepowers/radar"
-ForcePowerName "Radar Scanner"
-StartSound "sound/ambience/kotor/console08.mp3"
-LoopSound "sound/ambience/cp_02_lp.wav"
-}
-
-ForceInfo2
-{
 ForceToReplace FP_PULL
 Icon "gfx/forcepowers/push"
 ForcePowerName "Magnet Glove"
+HandShader "gfx/effects/dekashield2"
+StartSound "sound/force/magnetpull.mp3"
 }
 
 description "Rebel Sapper [Elite Trooper]
@@ -155,6 +148,7 @@ description "Rebel Sapper [Elite Trooper]
 
 ^2Weaponry:
 - Melee
+-- Tracks on hit
 -- 20% faster RoF
 -- 50% less DMG
 - DL-44 Blaster Pistol (2)
@@ -165,14 +159,12 @@ description "Rebel Sapper [Elite Trooper]
 - Pulse Grenade Launcher (M5)
 -- 65% faster RoF
 -- Sec. only
-- Trip Mine (1)
 - Pulse Grenades (2)
 - Det Packs (3)
--- 25% faster RoF
+-- 40% faster RoF
 
 ^5Powers:
 - Magnet Glove (Pull 1)
-- Radar Scanner (Sense 1)
 - Wrist Shocker (Lightning 1) ^3[CS1]
 
 ^6Inventory:
