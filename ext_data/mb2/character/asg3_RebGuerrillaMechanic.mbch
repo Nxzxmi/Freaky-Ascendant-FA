@@ -82,7 +82,7 @@ MissileHitDroidEffect "effects/sparks/spark_exp_nosnd"
 rateMod 3
 damageMod 1
 }
-description "(Rebel Guerrilla) Mechanic
+description "(Rebel Guerrilla) Mechanic [Soldier]
 
 Air
 
@@ -108,4 +108,5 @@ Backliner with the ability to repair armor, low survivability and little combat 
 - Assemble (1)
 
 ^3Abilities:
+
 - Sprint ^3[CS1]"
