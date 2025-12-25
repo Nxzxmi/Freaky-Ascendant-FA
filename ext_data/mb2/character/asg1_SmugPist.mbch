@@ -4,7 +4,7 @@ ClassInfo
 	weapons			WP_MELEE|WP_CLONE_PISTOL
 	attributes		MB_ATT_INAIR_FORCE_REGEN|MB_ATT_WOOKIEE_FURY,1|MB_ATT_WOOKIE_STRENGTH,1|MB_ATT_FLIPKICK,2|MB_ATT_CLONE_PISTOL,3|MB_ATT_AMMO,3|MB_ATT_CCTRAINING,2|MB_ATT_GUNBASH
 	forcepowers		FP_RAGE,3
-	maxhealth		100
+	maxhealth		85
 	maxarmor		75
 	forcepool		80
 	forceregen		0.6
@@ -21,7 +21,7 @@ ClassInfo
 
 	classNumberLimit 1
 
-	damageGiven		1.4
+	damageGiven		1
 	rateoffire		1.2
 	rateoffire_melee 1
     knockbackTaken  0.9
@@ -39,12 +39,12 @@ ClassInfo
 	c_att_ranks_0		-1
 
     c_att_skill_1        MB_ATT_FRAGS
-    c_att_names_1        "Frag Grenades:"
+    c_att_names_1        "Corrosive Grenades:"
     c_att_ranks_1        15,20
     
-    c_att_skill_2        MB_ATT_PULSE_GRENADES
-    c_att_names_2        "Pulse Grenades:"
-    c_att_ranks_2        15,20
+    c_att_skill_2        MB_ATT_SONIC_DETONATOR
+    c_att_names_2        "Sticky Flashbangs:"
+    c_att_ranks_2        25
 
 	c_att_skill_3		 MB_ATT_INVALID
 	c_att_names_3		 "^3-Abilities-"
@@ -72,25 +72,60 @@ ClassInfo
 
 WeaponInfo0
 {
-	WeaponToReplace		WP_CLONE_PISTOL
-	WeaponBasedOff		WP_MANDO_PISTOL
-	NewWorldModel		"models/weapons2/briar_pistol/briar_pistol_w.glm"
-	NewViewModel		"models/weapons2/dummy/dummy.md3"
-	Icon				"gfx/hud/w_icon_briar"
-	WeaponName			"Dual Bryar Pistols"
-	MuzzleEffect		"Blaster/MuzzleFlash01R"
-	AltMuzzleEffect		"Blaster/MuzzleFlash01R"
-	MissileEffect		"blaster/Shot03R"
-	Missile3Effect		"blaster/Shot03R"
-	AltMissileEffect	"blaster/Shot03R"
-	PowerupShotEffect	"Blaster/Shot04R"
-	ChargeEffect		"gfx/effects/blasterfrontflash"
-	MissileMissEffect	"effects/impacts/impactsmallred1"
-	AltMissileMissEffect	"effects/impacts/impactsmallred1"
-	FlashSound0		"sound/weapons/lvl3pistol/fire.wav"
-	AltFlashSound0	"sound/weapons/lvl3pistol/fire.wav"
-	clipSize 40
-	FPMult 1.4
+WeaponToReplace		WP_CLONE_PISTOL
+WeaponBasedOff		WP_MANDO_PISTOL
+NewWorldModel		"models/weapons2/briar_pistol/briar_pistol_w.glm"
+NewViewModel		"models/weapons2/dummy/dummy.md3"
+Icon				"gfx/hud/w_icon_briar"
+WeaponName			"Dual Bryar Pistols"
+MuzzleEffect		"Blaster/MuzzleFlash01Y"
+AltMuzzleEffect		"Blaster/MuzzleFlash01Y"
+MissileEffect		"blaster/Shot03Y"
+Missile3Effect		"blaster/Shot03Y"
+AltMissileEffect	"blaster/Shot03Y"
+PowerupShotEffect	"Blaster/Shot04Y"
+ChargeEffect		"gfx/effects/yellow_bryarFrontFlash"
+MissileMissEffect	"effects/impacts/impactsmallred1"
+AltMissileMissEffect	"effects/impacts/impactsmallred1"
+FlashSound0		"sound/weapons/lvl3pistol/fire.wav"
+AltFlashSound0	"sound/weapons/lvl3pistol/fire.wav"
+damageMod 1.4
+clipSize 40
+FPMult 1.4
+}
+WeaponInfo1
+{
+WeaponToReplace	WP_FRAG_NADE
+WeaponBasedOff	WP_THERMAL
+NewWorldModel	"models/weapons/Grenade_Concussion/model.glm"
+NewViewModel	"models/weapons/Grenade_Concussion/viewmodel.md3"
+Icon	"gfx/hud/w_icon_stungrenade"
+WeaponName	"Corrosive Frag Grenade"
+MissileModel	"models/weapons/Grenade_Concussion/proj.md3"
+MissileEffect	"effects/Grenades/GlowGasB"
+AltMissileEffect	"effects/Grenades/GlowGasB"
+MissileMissEffect	"effects/Grenades/EXP_Gas"
+altMissileMissEffect	"effects/Grenades/EXP_Gas"
+ratemod	1.5
+}
+WeaponInfo2
+{
+WeaponToReplace	WP_SONIC_NADE
+WeaponBasedOff	WP_SONIC_NADE
+Icon	"gfx/hud/w_icon_stungrenade"
+WeaponName	"Sticky Flashbang"
+NewWorldModel	"models/weapons/Grenade_Concussion/model.glm"
+NewViewModel	"models/weapons/Grenade_Concussion/viewmodel.md3"
+MissileEffect	"effects/Grenades/GlowConcB"
+AltMissileEffect	"effects/Grenades/GlowConcB"
+FlashSound0	"sound/weapons/g/wpn_arm_mine.mp3"
+AltFlashSound0	"sound/weapons/g/wpn_arm_mine.mp3"
+MissileMissEffect	"effects/Grenades/EXP_Flash"
+MissileHitHumanEffect	"effects/Grenades/EXP_Flash"
+MissileHitDroidEffect	"effects/Grenades/EXP_Flash"
+AltMissileMissEffect	"effects/Grenades/EXP_Flash"
+AltMissileHitHumanEffect	"effects/Grenades/EXP_Flash"
+AltMissileHitDroidEffect	"effects/Grenades/EXP_Flash"
 }
 
 description	"Smuggler Pistoleer
