@@ -1,0 +1,127 @@
+ClassInfo
+{
+	name  	"ase2_isb"
+	MBClass 		MB_CLASS_HERO
+	classNumberLimit	1
+	weapons 			WP_MANDO_PISTOL|WP_MELEE|WP_SABER|WP_BOWCASTER|WP_SONIC_NADE|WP_DET_PACK
+
+	WP_MandoPistoLFlags	HELD_ALTRELOAD|HELD_HIGHDAMAGE
+	
+	attributes  	MB_ATT_MANDO_PISTOL,2|MB_ATT_HEALING,3|MB_ATT_AMMO,3|MB_ATT_DODGE,3|MB_ATT_FLIPKICK,2|MB_ATT_DASH,2|MB_ATT_SONIC_DETONATOR,2|MB_ATT_DET_PACK,3|MB_ATT_DEXTERITY,1
+	
+	forcepowers 	FP_SABER_OFFENSE,3
+	maxhealth 150
+	maxarmor  95
+
+	saber1	truncheon_legends
+	saberstyle	SS_DUAL|SS_TAVION
+	saberDamage 61
+	APmultiplier  1.25
+	CSmultiplier  1.1
+	ASmultiplier  1.15
+	BPmultiplier 0
+	saberMaxChain 2
+	
+	hackrate		0.65
+
+	modelscale 	0.933
+	model 		"isb_agont"
+	skin  		"default"
+	uishader  	"models/players/isb_agont/icon_default"
+	
+	forcepool 	125
+	forceregen	1.8
+	resource	 RESOURCE_ENERGY
+
+	holdables 	HI_BINOCULARS|HI_MEDPAC_BIG
+	classflags	CFL_SEEING_STEALTH
+
+	DamageGiven     1.15
+	rateOfFire 	    	0.8
+	rateoffire_melee 0.85
+	speed            1.05
+	
+	saberStanceAnim	BOTH_MELEE_STAND2
+	flourishAnim     BOTH_STAND5TOAIM
+	gloatAnim	BOTH_SHOWOFF_FAST
+	tauntAnim	BOTH_ENGAGETAUNT
+	
+	special1	EAS_HI_DODGE
+	special2 EAS_HI_KICK
+	special3	EAS_HI_DASH
+	special4 EAS_HI_MEDPAC_BIG
+	
+	uioverlay "gfx/icons/spec_infantry"
+}
+
+WeaponInfo0
+{
+	WeaponToReplace 	WP_MANDO_PISTOL
+	WeaponBasedOff  	WP_BLASTER_PISTOL
+	NewWorldModel	"models/weapons2/imp_pistol/pistol_w.glm"
+	NewViewModel	"models/weapons2/imp_pistol/pistol_fpv.md3"
+	Icon		"gfx/hud/w_icon_imp_pistol"
+	WeaponName  		"ISB Blaster Pistol"
+	FlashSound0			"sound/weapons/SE-14c/fire.mp3" 		
+	altFlashSound0		"sound/weapons/SE-14c/fire.mp3" 
+	ChargeSound			"sound/weapons/leia_pistol/altcharge.mp3"	
+	ClipSize 			22
+	ReloadTimeModifier 	0.9
+	damageMod 1.1
+	CustomAmmo			820
+	FPMult 				1.6
+	hasAnimOverrides 1
+	animStand BOTH_STAND1
+	animAttackRun BOTH_ATTACK2
+	animAttack BOTH_ATTACK2
+	animAttackWalk BOTH_ATTACK2
+	animReadyRun BOTH_PISTOL_IDLE
+	animReady BOTH_PISTOL_IDLE
+	animReadyWalk BOTH_PISTOL_IDLE2
+	animReadyNoAmmo BOTH_ATTACK2
+}
+
+WeaponInfo1
+{
+	WeaponToReplace		WP_SABER			
+	WeaponBasedOff		WP_SABER			
+	NewWorldModel		"models/weapons2/dummyblaster/model.glm"  
+	NewViewModel		"models/weapons2/dummy/dummy.md3" 	  
+	Icon			"gfx/hud/w_icon_truncheon"
+	WeaponName		"ISB Truncheon" 
+}
+
+description	"ISB Agent [Hero]
+
+A speedy pistoleer with advanced movement capabilities and a Close Combat Trucheon to punish unsuspecting foes.
+
+^2Weaponry:
+- Melee
+-- 15% faster RoF
+- ISB Truncheon (Dual/Cyan Saber)
+-- No Saber/Blaster Block
+-- Chain Limit: 2
+-- 76/49% less DMG
+-- 30% less reach
+-- Slap ^3[CS2]
+- ISB Blaster Pistol (WESTAR 2)
+-- 60% more DMG/FP DMG
+-- 10% faster reload
+- Sonic Detonators (2)
+- Det Packs (3)
+
+^6Inventory:
+- Advanced Medpac ^3[CS4]
+- Electrobinoculars
+
+^8Attributes:
+- 45% Increased Hack Speed
+- Dexterity (1)
+- Healing (3)
+- Sense Immunity
+
+^3Abilities:
+- Flipkick (2) ^3[Contact Jump]
+- Dodge (3) ^3[CS1]
+- Gun Kick ^3[CS2 Gun]
+- Dash (2) ^3[CS3]"
