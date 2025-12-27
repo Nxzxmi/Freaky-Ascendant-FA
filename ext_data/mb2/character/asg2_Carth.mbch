@@ -47,22 +47,22 @@ ClassInfo
 	uioverlay_r "gfx/icons/brawler"
 	
 	isCustomBuild	1
-	mbPoints	5
+	mbPoints	6
 	c_att_skill_0	MB_ATT_MANDO_PISTOL
 	c_att_names_0	"Onasi Blaster Pistols(WESTARs)" //actual kotor weapon(s), wood handle family heirlooms or some shit not really explained
-	c_att_ranks_0	0,0,1
+	c_att_ranks_0	0,0,2
 	c_att_descs_0 "15% more DMG, 10% more FP DMG,
 	30% more charged FP DMG"
 	c_att_skill_1	MB_ATT_E_22
 	c_att_names_1	"Baragwin Assault Gun(E-22)" //actual kotor weapon
-	c_att_ranks_1	1,0,0
+	c_att_ranks_1	2,1,0
 	c_att_descs_1 "Staggers on hit, 10% higher FP DMG,
 	15% slower RoF"
 	c_att_skill_2	MB_ATT_REPEATER
 	c_att_names_2	"Baragwin Heavy Repeater" //actual kotor weapon
-	c_att_ranks_2	1,0,0
+	c_att_ranks_2	2,1,0
 	c_att_descs_2 "Prim. fire Repeater, 8% faster RoF,
-	15% faster velocity, 15% slower movement, 100% slower mag reload"
+	15% faster velocity, 15% slower movement, 200% slower mag reload"
 
 	c_att_skill_4	MB_ATT_MAGNETIC_PLATING
 	c_att_names_4	"Armorweave Underlay(M. Pla)"
@@ -74,7 +74,7 @@ ClassInfo
 	c_att_descs_5 "Durasteel Underlay grants Cortosis 1" //kotor 2 armor enhancement vs phys dmg
 	c_att_skill_6	MB_ATT_WOOKIE_STRENGTH
 	c_att_names_6	"GNS Strength Enhancer(Str)"
-	c_att_ranks_6 0,4
+	c_att_ranks_6 0,5
 	c_att_descs_6 "GNS Strength Enhancer grants Strength 2" //actual kotor belt item
 	c_att_skill_7	MB_ATT_BASESPEED
 	c_att_names_7	"Adrenaline Stimulator(250)" //actual kotor implant
@@ -141,13 +141,13 @@ WeaponInfo2
 	altMissileHitDroidEffect "repeater/concussion"
 	MissileMissEffect "Blaster/Impact_Wall01R_E"
 	FlashSound0			"sound/weapons/kotor/fire_power2.wav"
-	clipsize			120 //2x
+	clipsize			80 //1.5x
 	customAmmo 960
 	altfireEnabled	0
 	//FPMult	.8
 	rateMod 1.08
 	velocityMod 1.15
-	ReloadTimeModifier  2
+	ReloadTimeModifier  3
 }
 
 description	"Carth Onasi [Hero]
