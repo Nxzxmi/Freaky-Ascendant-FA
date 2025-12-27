@@ -28,7 +28,7 @@ ClassInfo
 	saberstyle	SS_STAFF
 	//saberStanceAnim BOTH_SPEAR_STANCE
 	BPmultiplier	1.3
-	ASmultiplier	1.15
+	ASmultiplier	1.2
 	CSmultiplier	1.2
 	APmultiplier	1.3
 	classflags CFL_STRONGAGAINSTPHYSICAL|CFL_BPFREEJUMPS
@@ -124,5 +124,3 @@ Uses its electrifying staff to disable and disarm opponents, finishing them with
 - Gunkick ^3[CS2]
 - Dash (1) ^3[CS3]
 - Grappling Hook (1) ^3[CS4]"
-
-
