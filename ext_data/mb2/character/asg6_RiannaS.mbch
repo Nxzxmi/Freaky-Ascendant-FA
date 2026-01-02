@@ -10,9 +10,9 @@ ClassInfo
 	maxarmor	15
 	
 	ArmourRegenCap 15
-	ArmourRegenAmount 15
-	ArmourRegenRate	10000
-	
+	ArmourRegenAmount 1
+	ArmourRegenRate 667
+
 	forcepool		70
 	forceregen	0.001
 	forcepowers		FP_SABER_OFFENSE,3
@@ -26,7 +26,7 @@ ClassInfo
 	
 	attributes	MB_ATT_TRACKING_BEACON|MB_ATT_AMMO,3|MB_ATT_MANDO_PISTOL,2|MB_ATT_DASH,2|MB_ATT_FLIPKICK,1|MB_ATT_FLOAT_HOP|MB_ATT_BUNNY_HOP,2|MB_ATT_WATERBREATHING|MB_ATT_SPY_DISGUISE,2|MB_ATT_GETUPS,4|MB_ATT_RECHARGE,3|MB_ATT_DEXTERITY,1|MB_ATT_DODGE,3
 	
-	skilltimermod 1.3
+	skilltimermod 1.67
 	knockbackTaken	1.2
 	
 	saber1	Rianna_Thorn_R
@@ -67,14 +67,13 @@ ClassInfo
 	hasAnimOverrides	1
 	jumpAnim	BOTH_FLIP_LEFT
 	gunbashAnim	BOTH_MELEE5
-	getupAnim	BOTH_FORCE_GETUP_B6
 	
 	isCustomBuild	1
 	mbPoints	2
 	c_att_skill_0	MB_ATT_EE3
 	c_att_names_0	"Alliance Op. Carbine(EE3)"
 	c_att_ranks_0	1,0,0
-	c_att_descs_0 "24% less DMG, 10% faster RoF, 15% more velocity, 50% faster reload"
+	c_att_descs_0 "24% less DMG, 20% faster RoF, 15% more velocity, 50% faster reload"
 	c_att_skill_2	MB_ATT_PROJECTILE_RIFLE
 	c_att_names_2	"Alliance Op. Sniper(Proj)"
 	c_att_ranks_2	1
@@ -137,7 +136,7 @@ WeaponInfo2
 	animAttackWalk BOTH_PISTOL_ATTACK
 	animCharge BOTH_PISTOL_ATTACK
 	VelocityMod 		1.15
-	rateMod 0.55
+	rateMod 0.5
 	damageMod .7 //25 dmg per shot
 }
 
@@ -159,7 +158,7 @@ WeaponInfo3
 	damageMod	.76 //25 dmg per shot
 	velocityMod 1.15
 	reloadTimeModifier	.5
-	rateMod	.9
+	rateMod	.8
 	hasAnimOverrides 1
 	animReadyRun 		BOTH_WESTARM5_IDLE
 	animReady 		BOTH_DC15_IDLE
@@ -243,9 +242,8 @@ High DMG melee specials along with droid support and high volume, low DMG weapon
 -- 100 damage
 -- Slap (Hammer of Ryloth) ^3[Gunbash/CS2]
 - Modified DL-44 Blaster Pistol (Mando P2)
--- 45% faster RoF
--- 15% less DMG
--- 15% more velocity
+-- 50% faster RoF
+-- 15% less/more DMG/velocity
 
 ^6Inventory:
 - Kolto (50 HP over time)
@@ -254,7 +252,7 @@ High DMG melee specials along with droid support and high volume, low DMG weapon
 - Seeker Droid
 
 ^5Attributes:
-- 30% slower skill CD
+- 67% slower skill CD
 - 20% more KB taken
 - Bunny Hop (2)
 - Getups (4)
@@ -262,7 +260,7 @@ High DMG melee specials along with droid support and high volume, low DMG weapon
 -- Electrifies/Staggers on hit
 -- 100% more DMG
 - Z-58-0 ''Zeeo'' Support
--- Armor regen 15/10s
+-- Armor regen 15/10s at 1/.67s
 -- Slow Fall
 -- Water Breathing
 -- Database Sharing (Tracking Beacon)
@@ -273,5 +271,3 @@ High DMG melee specials along with droid support and high volume, low DMG weapon
 - Gunkick (Hammer of Ryloth) ^3(CS2)
 - Dash (2) ^3(CS3)
 - Dex Roll ^3(CS4)"
-
-
