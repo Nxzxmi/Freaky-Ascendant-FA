@@ -70,8 +70,6 @@ WeaponInfo0
     animReady  BOTH_SABERDUAL_STANCE //upper
     animReadyWalk  BOTH_SABERDUAL_STANCE
     animReadyNoAmmo  BOTH_SABERDUAL_STANCE
-    animAttack NADE_SECONDARY
-    animAttackWalk NADE_SECONDARY
     animStand BOTH_STAND1 //lower
     damagemod 0.001
 	customammo	6
