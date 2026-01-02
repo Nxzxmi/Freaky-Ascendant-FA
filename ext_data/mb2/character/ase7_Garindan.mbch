@@ -5,7 +5,7 @@ ClassInfo
 	classNumberLimit	1
 	weapons			WP_SABER|WP_MGL|WP_STUN_BATON|WP_BLASTER_PISTOL|WP_DET_PACK
 
-	attributes		MB_ATT_AMMO,3|MB_ATT_SPAWNER,2|MB_ATT_PISTOL,3|MB_ATT_MGL,3|MB_ATT_STICKY_BOMBS,3|MB_ATT_DET_PACK,5|MB_ATT_STUN_BATON,3|MB_ATT_DEXTERITY,1|MB_ATT_BLAST_ARMOUR|MB_ATT_FRAGS,4|MB_ATT_QUICKTHROW,3|MB_ATT_DASH,2|MB_ATT_TRACKING_DART,6|MB_ATT_ROSHTAUNT
+	attributes		MB_ATT_AMMO,3|MB_ATT_SPAWNER,2|MB_ATT_PISTOL,3|MB_ATT_MGL,3|MB_ATT_STICKY_BOMBS,3|MB_ATT_DET_PACK,5|MB_ATT_STUN_BATON,3|MB_ATT_DEXTERITY,1|MB_ATT_BLAST_ARMOUR|MB_ATT_FRAGS,2|MB_ATT_QUICKTHROW,3|MB_ATT_DASH,2|MB_ATT_TRACKING_DART,6|MB_ATT_ROSHTAUNT
 	
 	WP_StunBatonFlags HELD_STUN|HELD_FLAME
 	
@@ -13,13 +13,13 @@ ClassInfo
 	MaxArmor		90
 
 	ArmourRegenCap 30
-	ArmourRegenAmount 15
-	ArmourRegenRate	10000
+	ArmourRegenAmount 1
+	ArmourRegenRate	667
 	
 	speed		1.06
 	
 	resource	RESOURCE_ENERGY
-	forcepool 100
+	forcepool 60
 	forcepowers	FP_PUSH,1
 	
 	ASmultiplier	1.15
@@ -133,7 +133,7 @@ WeaponInfo3
 	altFireAnim BOTH_AMBAN_IDLE
 	clipSize 3
 	customAmmo 60
-	damageMod .4 //32 dmg direct, 40 splash
+	damageMod .3 //24 dmg direct, 30 splash
 	rateMod .8 //allows more easy airbursts
 	velocityMod .8
 	reloadTimeModifier 10
@@ -195,9 +195,9 @@ The greatest spy in Mos Eisley spaceport, and very far from home
 - Overcharged DL-44 Heavy Blaster Pistol
 -- 40% more charged FP dmg/30% faster velocity
 - VRL-29 Air Burst Grenade Launcher
--- 60% less DMG/1000% slower reload
+-- 70% less DMG/1000% slower reload
 -- 20% faster RoF/slower velocity
-- Smoke Pellets (4) (Frags)
+- Smoke Pellets (2) (Frags)
 -- Quick-Throw only
 - Det Packs (5)
 
@@ -213,7 +213,7 @@ The greatest spy in Mos Eisley spaceport, and very far from home
 - Force Sense Immunity
 
 ^3Abilities:
-- Dash (2) ^3[CS2]
-- Tracking Darts ^3[CS3]
+- Tracking Darts ^3[CS2]
+- Dash (2) ^3[CS3]
 - Quick-Throw (3) ^3[CS4]
 - Snitching [Taunt damages Jedi]"
