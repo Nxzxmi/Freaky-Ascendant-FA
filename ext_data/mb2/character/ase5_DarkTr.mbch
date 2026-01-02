@@ -7,7 +7,7 @@ ClassInfo
 	
 	attributes 	MB_ATT_BLAST_ARMOUR,1|MB_ATT_AMMO,3|MB_ATT_JETPACK,1|MB_ATT_FUEL,3|MB_ATT_ROCKET_LAUNCHER|MB_ATT_BOWCASTER,3|MB_ATT_WOOKIE_STRENGTH,3|MB_ATT_BESKAR,3|MB_ATT_ANTI_MT,2|MB_ATT_TRACKING_BEACON|MB_ATT_HEALING,1|MB_ATT_FRAGS,2
 	
-	armourRegenCap 100
+	armourRegenCap 25
 	armourRegenAmount	1
 	armourRegenRate		1500
 	maxhealth 		100
@@ -37,11 +37,12 @@ ClassInfo
 	c_att_ranks_0	7
 	
 	c_att_skill_1	MB_ATT_MAGNETIC_PLATING
-	c_att_names_1	"Reinforced Phrik (Mag Plating)"
+	c_att_names_1	"Reinforced Phrik"
 	c_att_ranks_1	4
+	c_att_descs_1	Mag Plating (50% Blaster Resistance)
 	
 	c_att_skill_2 	MB_ATT_CORTOSIS
-	c_att_names_2	"Cortosis Infused Phrik (Cortosis)"
+	c_att_names_2	"Cortosis Infused Phrik"
 	c_att_ranks_2	6
 
 	c_att_skill_3 	MB_ATT_ARMOUR
