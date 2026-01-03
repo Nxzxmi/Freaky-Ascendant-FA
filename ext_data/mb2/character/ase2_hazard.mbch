@@ -29,6 +29,8 @@ ClassInfo
 	rateoffire_melee 1.1
 	basespeed	155
 	
+	WP_ConcussionFlags	HELD_LOWDAMAGE|HELD_SLOW
+	
 	knockbacktaken	.2
 	
 	uioverlay "gfx/icons/spec_infantry"
@@ -47,6 +49,8 @@ A slow moving, heavy damage dealing Infantryman with damage resistance
 - Heavy Melee
 - Imperial Repeater (2)
 - Concussion Rifle (1)
+-- 50% Less Damage
+-- Slow Movement
 - Det Packs (3)
 
 ^6Inventory:
