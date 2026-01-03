@@ -7,7 +7,7 @@ ClassInfo
 	classNumberLimit	1
 	weapons 			WP_CONCUSSION|WP_MELEE|WP_REPEATER|WP_DET_PACK
 
-	attributes  	MB_ATT_REPEATER,2|MB_ATT_SHIELD_RECHARGE,1|MB_ATT_AMMO,3|MB_ATT_CONCUSSION,1|MB_ATT_DET_PACK,3|MB_ATT_BLAST_ARMOUR|MB_ATT_WATER_BREATHING,1
+	attributes  	MB_ATT_REPEATER,2|MB_ATT_SHIELD_RECHARGE,1|MB_ATT_AMMO,3|MB_ATT_CONCUSSION,1|MB_ATT_DET_PACK,3|MB_ATT_BLAST_ARMOUR|MB_ATT_WATER_BREATHING,1|MB_ATT_BATTERY,2
 	
 	maxhealth 200
 	maxarmor  110
@@ -21,7 +21,7 @@ ClassInfo
 	
 	forcepool 	75
 	forceregen	0.7
-	resource	 RESOURCE_ENERGY
+	resource	 RESOURCE_BATTERY
 
 	holdables 	HI_MEDPAC_BIG
 	classflags	CFL_HEAVYMELEE
@@ -34,7 +34,12 @@ ClassInfo
 	
 	uioverlay "gfx/icons/spec_infantry"
 }
-
+ForceInfo0
+{
+	ForceToReplace	FP_SEE
+	Icon		"gfx/forcepowers/radar"
+	ForcePowerName	"Motion Detector"
+}
 description	"Imperial Remnant Hazard Trooper [Hero]
 
 A slow moving, heavy damage dealing Infantryman with damage resistance
@@ -49,6 +54,8 @@ A slow moving, heavy damage dealing Infantryman with damage resistance
 - Advanced Medpac ^3[CS4]
 
 ^8Attributes:
+- Battery (2)
+- Motion Detector (Sense 1)
 - Shield Regen (1)
 - Blast Armour
 - Water Breathing
