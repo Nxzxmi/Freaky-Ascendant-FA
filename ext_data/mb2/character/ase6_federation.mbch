@@ -1,0 +1,102 @@
+ClassInfo
+{
+	name	"ase6_federation"
+	classNumberLimit	1
+	
+	MBClass	MB_CLASS_MANDALORIAN
+	weapons	WP_MELEE|WP_T21|WP_FRAG_NADE
+	
+	attributes	MB_ATT_AMMO,3|MB_ATT_RALLY|MB_ATT_TRACKING_BEACON|MB_ATT_WRISTLASER,1|MB_ATT_DASH,1|MB_ATT_SHIELD_RECHARGE,1|MB_ATT_FRAGS,3|MB_ATT_QUICKTHROW,3|MB_ATT_T21,1|MB_ATT_DISP_FORCE,2
+	maxhealth	150
+	maxarmor	25
+
+	resource RESOURCE_ENERGY
+	forcepool 100
+	basespeed	220
+		
+	uioverlay_l "gfx/icons/tactician"
+	
+	holdables HI_SENTRY_GUN|HI_SHIELD|HI_SEEKER
+	
+	special1 EAS_HI_QUICKTHROW
+	special2 EAS_HI_WRIST
+	special3 EAS_HI_KICK
+	special4 EAS_HI_DASH
+	
+	WP_FragNadeFlags	HELD_STUN	
+	WP_T21Flags		HELD_LOWDAMAGE
+	
+	modelScale 1
+	
+	model	"gunray"
+	skin	"default"
+	uishader  	"models/players/gunray/mb2_icon_default"
+	
+	model_1	"rune"
+	skin_1	"default"
+	uishader_1  	"models/players/rune/mb2_icon_default"
+	
+	rateoffire		.45
+	classflags	CFL_RUNFASTMELEE
+}
+WeaponInfo0
+{
+	WeaponToReplace		WP_T21
+	WeaponBasedOff		WP_T21
+	NewWorldModel 		"models/weapons2/e5/e5_w.glm"
+	NewViewModel 		"models/weapons2/dummy/dummy.md3"
+	Icon				"gfx/hud/w_icon_e5"
+	WeaponName		"E-5 Blaster Rifle"	
+	FlashSound0 		"sound/weapons/blasterMB/fire.mp3"
+	FlashSound1 		"sound/weapons/blasterMB/fire.mp3"
+	FlashSound2 		"sound/weapons/blasterMB/fire.mp3"
+	FlashSound3 		"sound/weapons/blasterMB/fire.mp3"
+	AltFlashSound0	   "sound/weapons/blasterMB/fire.mp3"
+	MuzzleEffect		"Blaster/MuzzleFlash01R"
+	MissileEffect		"blaster/Shot01R"
+	altMuzzleEffect		"Blaster/MuzzleFlash01R"
+	altMissileEffect		"blaster/Shot01R"
+	customAmmo 		1008
+	clipsize 		144
+}
+
+WeaponInfo1
+{	
+	WeaponToReplace	WP_FRAG_NADE
+	WeaponBasedOff	WP_THERMAL
+	NewWorldModel		"models/weapons/Grenade_Concussion/model.glm"
+	NewViewModel		"models/weapons/Grenade_Concussion/viewmodel.md3"
+	Icon				"gfx/hud/w_icon_stungrenade"
+	WeaponName		"Stun Grenades"
+	MissileModel 		"models/weapons/Grenade_Concussion/proj.md3"
+	primFireEnabled	0
+	CustomAmmo		3
+	altMissileMissEffect	"grenades/EXP_alt"
+}
+
+description	"Trade Federation Leader [Mandalorian]
+
+^2Weaponry:
+- Melee
+- E-5 Blaster Rifle (1)
+-- Based on the T-21
+-- 65% Faster ROF
+-- 50% Less Damage
+-- Prim Fire Only
+- Stun Grenades (3)
+-- Sec. Fire Only
+-- Based on Frag Nades
+-- Quick Throw ^3[CS1]
+- Wrist Laser ^3[CS2]
+
+^6Inventory:
+- Assault Sentry
+- Forcefield
+- Seeker Droid
+
+^8Attributes:
+- Resource Dispenser (2)
+- Rally
+- Tracking Beacon
+- Gun Kick ^3[CS3]
+- Dash (1) ^3[CS4]"

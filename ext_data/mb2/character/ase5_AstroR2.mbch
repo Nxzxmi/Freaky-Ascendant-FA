@@ -9,7 +9,7 @@ ClassInfo
 	
 	weapons WP_MELEE|WP_SABER|WP_BOWCASTER|WP_STUN_BATON
 	WP_MeleeFlags HELD_SLOW
-	WP_SaberFlags HELD_STUN
+	WP_SaberFlags HELD_POISON
  WP_BowcasterFlags HELD_ALTRELOAD|HELD_POISON|HELD_IGNOREBLOCK
 
  	attributes	MB_ATT_SHIELD_RECHARGE,1|MB_ATT_JETPACK,1|MB_ATT_WRISTLASER,1|MB_ATT_FP_MIRALUKA,1|MB_ATT_WOOKIE_STRENGTH,2|MB_ATT_DISP_BLOCK,2|MB_ATT_DISP_FORCE,2|MB_ATT_DISP_ARMOR,2|MB_ATT_USE_DISTANCE,2|MB_ATT_HEALING,2|MB_ATT_FUELREGEN,2|MB_ATT_CORTOSIS,1|MB_ATT_FLIPKICK,1|MB_ATT_BOWCASTER,1|MB_ATT_STUN_BATON,3
@@ -43,7 +43,6 @@ ClassInfo
 	forcepool	45
 
 	meleeMoves M_KICK|M_JUMPKICK
-	
 	
 	uioverlay_c "gfx/icons/aerial"
 	uioverlay_r "gfx/icons/tactician"
@@ -101,9 +100,9 @@ WeaponInfo2
 	clipsize	40
 	ReloadTimeModifier	1.4
 	FPMult 2
-	damageMod 1.25
-	velocitymod 0.5
-	ratemod 1.5
+	damageMod 0.75
+	velocitymod 0.3
+	ratemod 1.8
 }
 WeaponInfo3
 {
@@ -157,10 +156,12 @@ A plucky support with numerous gadgets.
 -- 2400% faster RoF
 -- 90% less DMG
 -- 50% less reach
+-- Causes Bleeding (Poison)
 - Toxin Launcher
 -- Based on the Bowcaster (1)
--- 40% Slower Rounds
--- 50% Slower ROF
+-- 25% Less Damage
+-- 30% Slower Rounds
+-- 80% Slower ROF
 -- 50% slower mag reload
 -- 2x FP damage
 -- Causes Poison on Hit
