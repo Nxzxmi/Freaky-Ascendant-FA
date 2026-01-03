@@ -1,0 +1,57 @@
+//Fuse
+
+ClassInfo
+{
+	name  	"ase2_hazard"
+	MBClass 		MB_CLASS_MANDALORIAN
+	classNumberLimit	1
+	weapons 			WP_CONCUSSION|WP_MELEE|WP_REPEATER|WP_DET_PACK
+
+	attributes  	MB_ATT_REPEATER,2|MB_ATT_SHIELD_RECHARGE,1|MB_ATT_AMMO,3|MB_ATT_CONCUSSION,1|MB_ATT_DET_PACK,3|MB_ATT_BLAST_ARMOUR|MB_ATT_WATER_BREATHING,1
+	
+	maxhealth 200
+	maxarmor  110
+	
+	forcepowers	FP_SEE,1
+
+	modelscale 	1.07
+	model 		"hazardtrooper"
+	skin  		"default"
+	uishader  	"models/players/hazardtrooper/icon_default"
+	
+	forcepool 	75
+	forceregen	0.7
+	resource	 RESOURCE_ENERGY
+
+	holdables 	HI_MEDPAC_BIG
+	classflags	CFL_HEAVYMELEE
+
+	Damagetaken    .8
+	rateoffire_melee 1.1
+	basespeed	155
+	
+	knockbacktaken	.2
+	
+	uioverlay "gfx/icons/spec_infantry"
+}
+
+description	"Imperial Remnant Hazard Trooper [Hero]
+
+A slow moving, heavy damage dealing Infantryman with damage resistance
+
+^2Weaponry:
+- Heavy Melee
+- Imperial Repeater (2)
+- Concussion Rifle (1)
+- Det Packs (3)
+
+^6Inventory:
+- Advanced Medpac ^3[CS4]
+
+^8Attributes:
+- Shield Regen (1)
+- Blast Armour
+- Water Breathing
+- 80% Knockback Resistance
+- Low Base Speed
+- 20% Damage Resistance"
