@@ -23,7 +23,6 @@ ClassInfo
 	resource	 RESOURCE_BATTERY
 
 	holdables 	HI_MEDPAC_BIG
-	classflags	CFL_HEAVYMELEE
 
 	Damagetaken    .8
 	rateoffire_melee 1.1
@@ -35,6 +34,19 @@ ClassInfo
 	
 	uioverlay "gfx/icons/spec_infantry"
 }
+
+WeaponInfo0
+{
+	WeaponToReplace		WP_MELEE
+	WeaponBasedOff		WP_MELEE
+	NewWorldModel		"models/weapons2/dummyblaster/model.glm"
+	NewViewModel		"models/weapons2/dummy/dummy.md3"
+	Icon			"gfx/hud/Alpha/HUD_Icon_WhistlingBird"
+	WeaponName		"N/A"
+	primFireEnabled	0
+	AltFireEnabled 		0
+}
+
 ForceInfo0
 {
 	ForceToReplace	FP_SEE
@@ -46,7 +58,6 @@ description	"Imperial Remnant Hazard Trooper [Mandalorian]
 A slow moving, heavy damage dealing Infantryman with damage resistance
 
 ^2Weaponry:
-- Heavy Melee
 - Imperial Repeater (2)
 - Concussion Rifle (1)
 -- 50% Less Damage
