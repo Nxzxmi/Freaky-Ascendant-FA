@@ -34,7 +34,7 @@ ClassInfo
 	saberMaxChain 2
 
 	classflags		CFL_SEEING_STEALTH
-	holdables		HI_CLOAK|HI_SPAWNER|HI_STIMPACK
+	holdables		HI_SPAWNER|HI_STIMPACK
 
 	special1	EAS_FP_SABERTHROW
 	special2	EAS_HI_TRACKER
