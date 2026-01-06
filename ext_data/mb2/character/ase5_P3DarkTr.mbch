@@ -2,70 +2,75 @@
 
 ClassInfo
 {
-	name 	"ase5_DarkTr"
+	name 	"ase5_P3DarkTr"
 	weapons 	WP_MELEE|WP_BOWCASTER|WP_ROCKET_LAUNCHER
 	
-	attributes 	MB_ATT_BLAST_ARMOUR,1|MB_ATT_AMMO,3|MB_ATT_JETPACK,1|MB_ATT_FUEL,3|MB_ATT_ROCKET_LAUNCHER|MB_ATT_BOWCASTER,3|MB_ATT_WOOKIE_STRENGTH,3|MB_ATT_BESKAR,3|MB_ATT_ANTI_MT,2|MB_ATT_TRACKING_BEACON|MB_ATT_HEALING,1|MB_ATT_FRAGS,2
+	attributes 	MB_ATT_BLAST_ARMOUR,1|MB_ATT_AMMO,3|MB_ATT_JETPACK,1|MB_ATT_FUEL,3|MB_ATT_ROCKET_LAUNCHER|MB_ATT_BOWCASTER,3|MB_ATT_WOOKIE_STRENGTH,2|MB_ATT_BESKAR,3|MB_ATT_ANTI_MT,2|MB_ATT_TRACKING_BEACON|MB_ATT_HEALING,1
 	
-	armourRegenCap 100
-	armourRegenAmount	1
-	armourRegenRate		1500
 	maxhealth 		100
 	maxarmor			200
-	rankArmor	300
+	rankArmor	250
 
-	modelscale 			1.17
-	damageTaken   		0.9
+	modelscale 			1.25
+	damageTaken   		0.90
 	DamageGiven			1.1
 	speed               0.95
 	
-	knockbackgiven		1.1
-	knockbacktaken		0.9
+	knockbackgiven		1.2
+	knockbacktaken		0.8
 	
 	classflags	CFL_STRONGAGAINSTPHYSICAL|CFL_BLOODYMELEE|CFL_NOLOCATIONALDAMAGE
 	
 	WP_RocketLauncherFlags 	HELD_ALTRELOAD|HELD_KNOCKBACK
 
 	resource	RESOURCE_FUEL
-	forcepool 300
+	forcepool 200
 
 	isCustomBuild		1
-	mbPoints			9
+	mbPoints			10
 	
 	c_att_skill_0	MB_ATT_RESPAWNS
 	c_att_names_0	"Reinforcement"
-	c_att_ranks_0	7
+	c_att_ranks_0	10
 	
 	c_att_skill_1	MB_ATT_MAGNETIC_PLATING
-	c_att_names_1	"Reinforced Phrik (Mag Plating)"
-	c_att_ranks_1	4
+	c_att_names_1	"Deflector Shield (Mag Plating)"
+	c_att_ranks_1	6
 	
 	c_att_skill_2 	MB_ATT_CORTOSIS
-	c_att_names_2	"Cortosis Infused Phrik (Cortosis)"
-	c_att_ranks_2	6
+	c_att_names_2	"Cortosis Infused Phrik"
+	c_att_ranks_2	7
 
 	c_att_skill_3 	MB_ATT_ARMOUR
-	c_att_names_3	"Armor (300)"
-	c_att_ranks_3	3
+	c_att_names_3	"Armor (250)"
+	c_att_ranks_3	2
 
 	c_att_skill_4 	MB_ATT_MICRO_GRENADES
 	c_att_names_4	"Concussion Grenades"
-	c_att_ranks_4	1,1
+	c_att_ranks_4	1,2
 
 	c_att_skill_5 	MB_ATT_THERMALS
 	c_att_names_5	"Thermal Detonator"
-	c_att_ranks_5	2,2
+	c_att_ranks_5	4,0
+
+	c_att_skill_6	MB_ATT_FRAGS
+	c_att_names_6	"Frag Grenades"
+	c_att_ranks_6	2,2
 	
 	model 	"darktrooper_p3"
 	skin  	"default"
 	uishader  "models/players/DarkTrooper_p3/mb2_icon_default"
-	
-	model_1 		"darktrooper_p0"
-	skin_1  		"default"
-	uishader_1  	"models/players/DarkTrooper_p0/mb2_icon_default"
 
 	jetpackJetTag	 *jet1
 	jetpackJet2Tag *jet2
+
+	jetpackThrustEffect		"effects/jetpack_b/thrust.efx"
+	jetpackIdleEffect		"effects/jetpack_b/idle.efx"
+	
+	jetpackFinishSound 	"sound/effects/dtjetpack/finish.wav"
+	jetpackThrustSound  "sound/effects/dtjetpack/thrust.wav"
+	jetpackStartSound 	"sound/effects/dtjetpack/start.wav"
+	jetpackIdleSound	"sound/effects/dtjetpack/idle.wav"
 	
 	//respawncustomtime 	75000
 	classNumberLimit  	2
@@ -88,18 +93,19 @@ WeaponInfo0
 	NewHandsModel			"models/weapons2/merr_sonn/merr_sonn_hand.md3"
 	Icon					"gfx/hud/w_icon_DTAC"
 	WeaponName				"Assault Cannon"
-	FlashSound0 			"sound/weapons/assault_cannon/fire.mp3"
-	AltFlashSound0 			"sound/weapons/assault_cannon/fire.mp3"
-	ChargeSound 			"sound/weapons/leia_pistol/altcharge.mp3"
+	FlashSound0 			"sound/weapons/phase3_cannon/fire.wav"
+	AltFlashSound0 			"sound/weapons/phase3_cannon/fire.wav"
+	ChargeSound 			"sound/weapons/phase3_cannon/chargeup.wav"
+	selectSound "sound/weapons/phase3_cannon/ready.wav"
 hasAnimOverrides 1
-animReadyRun BOTH_WESTARM5_READY
-animReady BOTH_WESTARM5_READY
-animReadyWalk BOTH_WESTARM5_READY
-animAttackRun BOTH_WESTARM5_ATTACK
-animAttack BOTH_WESTARM5_ATTACK
-animAttackWalk BOTH_WESTARM5_ATTACK
-animCharge BOTH_WESTARM5_ATTACK
-	CustomAmmo 				800
+animReadyRun BOTH_PLX1_READY
+animReady BOTH_PLX1_READY
+animReadyWalk BOTH_PLX1_READY
+animAttackRun BOTH_PLX1_ATTACK
+animAttack BOTH_PLX1_ATTACK
+animAttackWalk BOTH_PLX1_ATTACK
+animCharge BOTH_PLX1_ATTACK
+	CustomAmmo 				1000
 	MuzzleEffect			"blaster/MuzzleFlash01B"
 	AltMuzzleEffect			"blaster/MuzzleFlash01B"
 	MissileEffect			"demp2/projectile"
@@ -117,6 +123,9 @@ WeaponInfo1
 	NewViewModel			"models/weapons2/dummy/dummy.md3"
 	Icon				"gfx/hud/w_icon_DTAC_rocket"
 	WeaponName			"Assault Cannon Rocket Attachment"
+	FlashSound0 			"sound/weapons/phase3_rocket/fire.wav"
+	AltFlashSound0 			"sound/weapons/phase3_rocket/fire.wav"
+	selectSound "sound/weapons/phase3_rocket/ready.wav"
 hasAnimOverrides 1
 animReadyRun BOTH_PLX1_READY
 animReady BOTH_PLX1_READY
@@ -124,14 +133,14 @@ animReadyWalk BOTH_PLX1_READY
 animAttackRun BOTH_PLX1_ATTACK
 animAttack BOTH_PLX1_ATTACK
 animAttackWalk BOTH_PLX1_ATTACK
-	CustomAmmo 			12
+	CustomAmmo 			8
 	clipSize 			4
 	ReloadTimeModifier 	1.6
 	velocityMod 1.25
 	rateMod 1.25
 }
 
-description	"Dark Trooper [Wookiee] -Kalkite
+description	"Dark Trooper Phase III [Wookiee] -Kalkite
  
 A Jetpack-equipped tank with a high-powered Assault Cannon and Rocket Launcher.
 
@@ -140,17 +149,17 @@ A Jetpack-equipped tank with a high-powered Assault Cannon and Rocket Launcher.
 - Assault Cannon (Bowcaster 3)
 -- 5% faster RoF
 -- 10% more DMG
-- Assault Cannon Rocket Attachment (16) (RL)
+- Assault Cannon Rocket Attachment (12) (RL)
 -- Pushes on hit
 -- 25% more velocity
 -- 25% slower RoF
 -- 60% slower mag reload
 -- Homing Rockets ^3[Hold Sec. ^3fire]
-- Frag Grenade (2)
 
 ^8Attributes:
-- 10% more/less KB given/taken
-- Strength (3)
+- 20% more KB given
+- 20% less KB taken
+- Strength (2)
 - Phrik Armor (Beskar 3)
 - Blast Armor
 - Physical Resist
