@@ -104,16 +104,17 @@ SubclassesForClass5
 {
 	Subclass1	"asg9_JKnight"
 	Subclass2 	"asg9_JediTG"
-	Subclass3	"h9_Anakin"
-	Subclass4	"h9_JCrusader"
-	Subclass5	"h9_Windu"
-	Subclass6	"h9_JSage"
-	Subclass7	"h9_JGladiator"
-	Subclass8	"h9_Yarael"
-	Subclass9	"h9_JSword"
-	Subclass10	"h9_JAcrobat"
-	Subclass11	"h9_JBrute"
-	Subclass12	"asg9_Atris"
+	Subclass3	"asg9_Proxy"
+	Subclass4	"h9_Anakin"
+	Subclass5	"h9_JCrusader"
+	Subclass6	"h9_Windu"
+	Subclass7	"h9_JSage"
+	Subclass8	"h9_JGladiator"
+	Subclass9	"h9_Yarael"
+	Subclass10	"h9_JSword"
+	Subclass11	"h9_JAcrobat"
+	Subclass12	"h9_JBrute"
+	Subclass13	"asg9_Atris"
 }
 
 SubclassesForClass6
