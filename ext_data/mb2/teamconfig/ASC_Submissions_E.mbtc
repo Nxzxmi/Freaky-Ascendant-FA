@@ -57,10 +57,11 @@ SubclassesForClass2
 	Subclass13	"v5_Cad"
 	Subclass14	"v5_Boba"
 	Subclass15	"v5_Watto"
-	Subclass16	"ase5_P1DarkTr"
-	Subclass17	"ase5_P2DarkTr"
-	Subclass18	"ase5_P3DarkTr"
-	Subclass19	"ase5_AstroR2"
+	Subclass16	"ase5_P0DarkTr"
+	Subclass17	"ase5_P1DarkTr"
+	Subclass18	"ase5_P2DarkTr"
+	Subclass19	"ase5_P3DarkTr"
+	Subclass20	"ase5_AstroR2"
 }
 
 SubclassesForClass3
