@@ -25,6 +25,7 @@ ClassInfo
 
 	meleeknockback_flat 150
 
+	WP_PistolFlags   HELD_KNOCKBACK|HELD_ALTRELOAD
 
 	classflags          	CFL_SEEING_STEALTH|CFL_STRONGAGAINSTPHYSICAL|CFL_BLOODYMELEE
 	rageSoundOverride 		"sound/chars/k2so/misc/taunt2.mp3"
@@ -106,7 +107,7 @@ WeaponInfo1
 	altGore			1
 }
 
-description	"K-2SO [Wookiee]
+description	"K-2SO [Wookiee] -Kalkite ^3Reworked
 
 An exceptionally sturdy tank with protection against multiple Force powers and damage types. Deals massive knockback.
 

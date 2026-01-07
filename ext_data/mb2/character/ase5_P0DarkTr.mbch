@@ -14,7 +14,7 @@ ClassInfo
 	modelscale 			1.05
 	damageTaken   		1.0
 	DamageGiven			1.0
-	speed               1.00
+	speed               1.05
 	
 	knockbackgiven		1.0
 	knockbacktaken		1.0
@@ -28,7 +28,6 @@ ClassInfo
 	forcepool 60
 	forceregen	2.00
 
-	special1		EAS_HI_SPRINT
 	special2 		EAS_MELEE
 	special3 		EAS_HI_DEX
 
@@ -159,8 +158,8 @@ To return aged veterans of the Clone Wars to peak condition, their limbs and org
 - Tracking Beacon
 - Healing (3)
 - Assemble (3)
+- Dexterity (2)
 
 ^3Abilities:
-- Jetpack"
-- Sprint ^3[CS1]"
-- Dexterity (2) ^3[CS3]
+- Jetpack
+- Dexterity Roll ^3[CS3]"

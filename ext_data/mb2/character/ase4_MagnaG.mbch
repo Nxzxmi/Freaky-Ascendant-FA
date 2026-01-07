@@ -91,7 +91,7 @@ WeaponInfo1
 	customAmmo 900
 }
 
-description 	"IG-100 MagnaGuard [Sith]
+description 	"IG-100 MagnaGuard [Sith] ^3Reworked
 
 Mobile hybrid with high dueling stats and armor regen.
 Uses its electrifying staff to disable and disarm opponents, finishing them with its blaster.
