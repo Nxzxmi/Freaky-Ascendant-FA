@@ -38,7 +38,7 @@ ClassInfo
 	
 	model "proxy_tfu"
 	skin "default"
-	uishader "models/players/atris/mb2_icon_default"
+	uishader "models/players/proxy_tfu/mb2_icon_default"
 
 
 	respawnCustomTime 50000
