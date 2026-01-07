@@ -5,7 +5,7 @@ ClassInfo
 	name 	"ase5_P1DarkTr"
 	weapons 	WP_SABER|WP_MELEE
 	
-	attributes 	MB_ATT_STAMINA,3|MB_ATT_DEFLECT,1|MB_ATT_ASSEMBLE|MB_ATT_WOOKIE_STRENGTH,2|MB_ATT_BESKAR,2|MB_ATT_ANTI_MT,2|MB_ATT_BLAST_ARMOUR,1|MB_ATT_TRACKING_BEACON|MB_ATT_FP_SABER_DEFENSE,1|MB_ATT_GUN_DEFENSE,2|MB_ATT_ASSEMBLE,3
+	attributes 	MB_ATT_STAMINA,3|MB_ATT_DEFLECT,1|MB_ATT_ASSEMBLE|MB_ATT_WOOKIE_STRENGTH,2|MB_ATT_BESKAR,2|MB_ATT_ANTI_MT,2|MB_ATT_BLAST_ARMOUR,1|MB_ATT_TRACKING_BEACON|MB_ATT_FP_SABER_DEFENSE,1|MB_ATT_GUN_DEFENSE,2|MB_ATT_ASSEMBLE,1
 	forcepowers     FP_SABER_OFFENSE,3|FP_LEVITATION,3
 	
 	maxhealth 		60
@@ -13,16 +13,17 @@ ClassInfo
 
 	modelscale 			1.15
 	damageTaken   		1.0
-	DamageGiven			1.0
-	speed               1.3
+	DamageGiven			1.1
+	speed               1.25
 	forceregen 1.5
+	rateoffire_melee 	1.25
 	
 	knockbacktaken		0.8
 
 	saber1          phase1
 	saber2          phase1
 	saberstyle      SS_TAVION|SS_DUAL
-	saberDamage 120
+	saberDamage 108 //with damage given it goes up 12 to 120
 	BPmultiplier	1.0
 	APMultiplier	1.0
 	CSMultiplier	1.2
@@ -34,7 +35,7 @@ ClassInfo
 	forcepool 80
 
 	special1		EAS_HI_SPRINT
-	special2 		EAS_HI_MELEE
+	special2 		EAS_MELEE
 
 
 	isCustomBuild		1
@@ -61,10 +62,10 @@ ClassInfo
 	MBClass 	MB_CLASS_CLONETROOPER
 	
 	uioverlay_r "gfx/icons/aerial"
-	uioverlay_c "gfx/icons/brawler"
+	uioverlay_c "gfx/icons/infantry"
 	uioverlay_l "gfx/icons/scout"
 	
-	meleeMoves M_UPPERCUT|M_BLOCK|M_FBKICK|M_JUMPKICK|M_KATA|M_KICK|M_LEGSWEEP|M_PUNCH|M_RLKICK
+	meleeMoves M_UPPERCUT|M_BLOCK|M_FBKICK|M_JUMPKICK|M_KATA|M_KICK|M_LEGSWEEP|M_RLKICK|M_PUNCH
 		flourishAnim BOTH_STAND5TOAIM
 }
 
@@ -84,6 +85,8 @@ description	"Dark Trooper Phase I [Clone Trooper] -Kalkite
 Phase I of the Dark Trooper project introduced battle droids resembling a human skeleton, which doubles as a psychological weapon. It features advanced leg hydraulics, a wrist blade, and a shield.
 
 ^2Weaponry:
+-Melee
+--25% Slower Punches
 -Wrist Blade
 -- Saber Defense (1)
 -- Blaster Defense (2)
@@ -99,7 +102,6 @@ Phase I of the Dark Trooper project introduced battle droids resembling a human 
 - Flat DMG Taken
 - Anti-Mind Trick (2)
 - Tracking Beacon
-- Assemble
 - Advanced Leg Hydraulics (Force Jump 3)
 - Assemble (3)
 
