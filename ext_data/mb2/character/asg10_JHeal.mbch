@@ -129,7 +129,7 @@ ClassInfo
 	c_att_ranks_10	5,10
 }
 
-description	"Jedi Healer [Jedi]
+description	"Jedi Healer [Jedi] ^3Reworked
 
 A Jedi with passive healing and team Force healing powers.
 

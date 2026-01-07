@@ -103,7 +103,7 @@ WeaponInfo1
 	velocityMod 1.15
 }
 
-description	"Imperial Jumptrooper [Wookiee]
+description	"Imperial Jumptrooper [Wookiee] ^3Reworked
 
 A 3-life Jetpack user with a suppression Repeater and a micro-Rocket Launcher.
 
