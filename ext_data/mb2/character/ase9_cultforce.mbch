@@ -10,7 +10,7 @@ ClassInfo
 	
 	resource RESOURCE_FORCE
 	forcepool 60
-	forceregen	.8
+	forceregen	.9
 	
 	maxhealth			80
 	maxarmor				10
