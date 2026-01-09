@@ -71,12 +71,13 @@ SubclassesForClass3
 	Subclass4	"asg5_BoKatan"
 	Subclass5	"asg5_DinMando"
 	Subclass6	"asg5_Paz"
-	Subclass7	"h5_Dash"
-	Subclass8	"h6_Cross"
-	Subclass9	"h6_Andor"
-	Subclass10	"h6_Nien"
-	Subclass11 	"h6_Mission"
-	Subclass12	"asg6_RiannaS"
+	Subclass7	"asg5_ordomando"
+	Subclass8	"h5_Dash"
+	Subclass9	"h6_Cross"
+	Subclass10	"h6_Andor"
+	Subclass11	"h6_Nien"
+	Subclass12 	"h6_Mission"
+	Subclass13	"asg6_RiannaS"
 }
 
 SubclassesForClass4
