@@ -1,0 +1,69 @@
+ClassInfo
+{
+	name			"asg5_ordomando"
+	MBClass			MB_CLASS_MANDALORIAN
+	weapons			WP_MELEE|WP_EE4|WP_FRAG_NADE
+
+	maxhealth		80
+	maxarmor        50	
+	attributes		MB_ATT_BESKAR,3|MB_ATT_EE4,3|MB_ATT_FRAGS,1|MB_ATT_STAMINA,2|MB_ATT_ASSEMBLE,2
+	modelscale  	1
+	
+	extralives		2
+	
+	rateOfFire  	1
+	
+	resource	RESOURCE_STAMINA
+	forcepool	80
+	
+	uioverlay_r "gfx/icons/spec_infantry"
+	
+	model			"manda_et"			
+	skin			"rgb"
+	customred		0.286
+	customgreen		0.557
+	customblue		0.824
+	uishader		"models/players/manda_et/mb2_icon_blue"
+	model_1			"manda_et"	
+	skin_1			"rgb"
+	customred_1		0.800
+	customgreen_1		0.122
+	customblue_1		0.122
+	uishader_1		"models/players/manda_et/mb2_icon_red"
+ 
+	special1	EAS_HI_SPRINT
+	special2 	EAS_MELEE
+	classNumberLimit	4
+	classflags		CFL_STRONGAGAINSTPHYSICAL
+	
+	damageTaken     0.95
+}
+
+WeaponInfo0
+{
+	WeaponToReplace		WP_EE4  			
+	WeaponBasedOff		WP_BLASTER 		
+	NewWorldModel		"models/weapons2/MandoAR/MandoAR.glm"
+	NewViewModel		"models/weapons2/MandoAR/MandoAR.md3"
+	Icon			"gfx/hud/w_icon_MandoAr"
+	WeaponName		"Mandalorian Assault Rifle"
+	FlashSound0		"sound/weapons/kotor/fire_med.wav"
+	damagemod		1.1
+}
+description	"Clan Ordo Mandalorian [Mandalorian]
+
+A Mandalorian who followed Mandalore the Preserver.
+
+^2Weaponry:
+- Melee
+- Mandalorian Assault Rifle (3)
+-- Based on the EE4
+-- 10% More Damage
+- 1 Frag Nade
+
+^8Attributes:
+- Beskar Armour (3)
+- Stamina ^3[CS1] (2)
+- Reinforcements (2)
+- Assemble (2)
+- Physical Resist"
