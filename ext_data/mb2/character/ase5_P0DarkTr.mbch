@@ -44,7 +44,7 @@ ClassInfo
 
 	c_att_skill_2	MB_ATT_THERMALS
 	c_att_names_2	"Thermal Detonators"
-	c_att_ranks_2	0,2,2
+	c_att_ranks_2	2
 
 	c_att_skill_3 	MB_ATT_PISTOL
 	c_att_names_3	"Commando Pistol"
@@ -57,7 +57,7 @@ ClassInfo
 
 	c_att_skill_5	MB_ATT_ARMOUR
 	c_att_names_5	"Armor (150)"
-	c_att_ranks_5	6
+	c_att_ranks_5	4
 	
 	model 		"darktrooper_p0"
 	skin 		"default"
@@ -112,6 +112,7 @@ WeaponInfo0
 	altFlashSound0 "sound/movers/objects/green_beam_hit.mp3"
 	selectSound "sound/weapons/phase2_arc/ready.wav"
 	altfireenabled		0
+	damageMod 0.85
 	clipsize   12
 	customammo 480
 	ReloadTimeModifier 		1.75
@@ -147,7 +148,7 @@ To return aged veterans of the Clone Wars to peak condition, their limbs and org
 ^2Weaponry:
 - Melee
 - Heavy ARC Caster (Shotgun 3)
---Electrifies on hit, 75% less velocity, 75% slower mag reload
+--Electrifies on hit, 75% less velocity, 75% slower mag reload, 15% less damage
 
 ^8Attributes:
 - Strength (1)
