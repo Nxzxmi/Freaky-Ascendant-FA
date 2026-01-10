@@ -42,7 +42,7 @@ ClassInfo
 	c_att_ranks_2	7
 
 	c_att_skill_3 	MB_ATT_ARMOUR
-	c_att_names_3	"Armor (250)"
+	c_att_names_3	"Armor (300)"
 	c_att_ranks_3	2
 
 	c_att_skill_4 	MB_ATT_MICRO_GRENADES

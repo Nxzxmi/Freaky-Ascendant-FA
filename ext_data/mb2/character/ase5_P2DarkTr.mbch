@@ -52,7 +52,7 @@ ClassInfo
 	c_att_ranks_4	12
 
 	c_att_skill_5	MB_ATT_ARMOUR
-	c_att_names_5	"Armor (200)"
+	c_att_names_5	"Armor (250)"
 	c_att_ranks_5	4
 	
 	model 		"phase2_dt"
