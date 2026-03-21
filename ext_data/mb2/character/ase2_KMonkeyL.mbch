@@ -1,0 +1,110 @@
+
+ClassInfo
+{
+ name			"ase2_KMonkeyL"
+ MBClass			MB_CLASS_SITH
+	classNumberLimit	4
+	extralives		2
+	weapons			WP_MELEE|WP_BLASTER|WP_FRAG_NADE
+	WP_BlasterFlags HELD_ALTRELOAD
+
+	attributes		MB_ATT_AMMO,2|MB_ATT_BLASTER,2|MB_ATT_ASSEMBLE,2|MB_ATT_ROSHTAUNT|MB_ATT_DEXTERITY,1|MB_ATT_FRAGS,1|MB_ATT_STAMINA,3|MB_ATT_GRAPPLE_HOP|MB_ATT_WOOKIE_STRENGTH,1|MB_ATT_DASH,1
+
+	maxhealth		90
+
+	forcepool 		115
+	forceregen 	1.25
+	forcepowers		FP_SEE,1|FP_LEVITATION,2
+	resource			RESOURCE_STAMINA
+
+	rateOfFire_Melee .9
+
+	skilltimermod 1.5
+ knockbackTaken 1.35
+	baseSpeed 195
+
+ classFlags CFL_NOPICKUPS
+
+	rageSoundOverride "sound/chars/salaciouscrumb/misc/rageactivate.mp3"
+	bargeSoundOverride "sound/chars/salaciouscrumb/misc/pain100.mp3"
+
+	special1		EAS_HI_SPRINT
+ special2  EAS_HI_DEX
+	special3		EAS_HI_DASH
+	special4		EAS_HI_GRAPPLEHOOK
+
+	//gloatAnim BOTH_DEATH18
+	gloatAnim BOTH_INJURED_TO_COLLAPSED
+	flourishAnim BOTH_FORCEWALLRUNFLIP_START
+	WalkBackward BOTH_WALKBACK_DUAL
+	WalkForward BOTH_WALK_DUAL
+	//BOTH_FORCEWALLRUNFLIP_START
+	//BOTH_FORCEWALLRUNFLIP_ALT
+	//BOTH_FORCEWALLRUNFLIP_END
+
+	model	"salaciouscrumb"
+	skin		"default"
+	uishader	"models/players/salaciouscrumb/mb2_icon_default"
+	modelscale		.63
+	uioverlay_r "gfx/icons/infantry"
+	uioverlay_l "gfx/icons/brawler"
+
+	isCustomBuild		1
+	mbPoints			1
+	
+	c_att_skill_0	MB_ATT_DASH_JUMP
+	c_att_names_0	"Dash Jump"
+	c_att_ranks_0	1
+	c_att_descs_0	"Can jump during Dash"
+	c_att_skill_1	MB_ATT_GRAPPLE_HOOK
+	c_att_names_1	"Grap. Hook/Hop ^3[CS4 Melee]"
+	c_att_ranks_1	1
+	c_att_descs_1 "Retain momentum from first Grapple"
+}
+WeaponInfo0
+{
+	WeaponToReplace	WP_BLASTER
+	WeaponBasedOff  WP_BLASTER
+	WeaponName      "Salvaged E-11 Blaster"
+    NewWorldModel	"models/weapons2/blaster_r/blaster_w.glm"  	
+	NewViewModel	"models/weapons2/blaster_r/blaster.md3"
+	Icon			"gfx/hud/w_icon_E11"
+	primFireEnabled	0
+ hasAnimOverrides 1
+ animReadyRun BOTH_WESTARM5_IDLE
+ animReady BOTH_WESTARM5_IDLE
+	animStand BOTH_WOOKIEE_RAGE_STAND
+
+}
+description	"Kowakian Monkey-Lizard ^3[Reworked]
+
+Small and agile 3-life creatures with many mobility options. Taunting within range of a Jedi will deal them minor damage.
+
+^2Weaponry:
+- Melee
+-- +10% Rate of Fire
+- Salvaged Imperial E-11
+-- Secondary Fire only
+-- Mag Reload
+- Frag Grenade (1)
+
+^5Powers:
+- Crumb Jump (2)
+- Crumb Sense (1)
+
+^8Attributes:
+- Reinforcements (2)
+- +35% Knockback Taken
+- +50% Skill Cooldown Timer
+- Stamina (3)
+- Dexterity (1)
+- Strength (1)
+- Assemble (2)
+
+^3Abilities:
+- Toxic Laughter
+- Sprint ^3[CS1]
+- Dex Roll ^3[CS2]
+- Dash (1) ^3[CS3]
+
+Turn over for nutritional information."

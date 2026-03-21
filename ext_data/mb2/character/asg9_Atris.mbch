@@ -1,6 +1,6 @@
 ClassInfo
  {
- 	name "h9_Atris"
+ 	name "asg9_Atris"
 	MBClass MB_CLASS_JEDI
 	classNumberLimit 1
 	weapons WP_SABER|WP_MELEE

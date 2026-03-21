@@ -2,7 +2,7 @@
 
 classinfo
 {
-	name	"ase10_kallig"
+	name	"ase10_Kallig"
 	mbclass	MB_CLASS_JEDI
 	maxhealth	100
 	forcepool	100
@@ -14,15 +14,13 @@ classinfo
 	forcepowers	FP_LEVITATION,2|FP_SEE,2|FP_PULL,1|FP_SPEED,1|FP_LIGHTNING,1|FP_SABER_OFFENSE,3|FP_PUSH,1
 	classflags	CFL_NOPICKUPS
 	
-	//healthregencap	100 < Doesn't seem to work
-	
 	model		"kallig"
 	skin		"default"
 	uishader	"models/players/kallig/icon_default"
 	
-	model_1		"kallig"
-	skin_1		"hood"
-	uishader_1	"models/players/kallig/icon_hood"
+	model_1		"lord_kallig"
+	skin_1		"default"
+	uishader_1	"models/players/lord_kallig/mb2_icon_default"
 	
 	saber1		saber_kallig
 	sabercolor	0

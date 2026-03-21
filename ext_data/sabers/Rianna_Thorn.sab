@@ -43,7 +43,7 @@ Rianna_Thorn
 	tauntAnim		BOTH_COME_ON1
 	gloatAnim		BOTH_VICTORY_FAST
 	lungeAtkMove		LS_A_LUNGE
-	drawAnim BOTH_MELEE1
+	drawAnim BOTH_MELEE_STAND1
 	jumpAtkLeftMove LS_JUMPATTACK_CART_LEFT
 	jumpAtkRightMove LS_JUMPATTACK_CART_RIGHT
 }
@@ -98,8 +98,9 @@ Rianna_Thorn_R
 	tauntAnim		BOTH_COME_ON1
 	gloatAnim		BOTH_VICTORY_FAST
 	lungeAtkMove		LS_A_LUNGE
-	drawAnim BOTH_MELEE1
+	drawAnim BOTH_MELEE_STAND1
 	jumpAtkLeftMove LS_JUMPATTACK_CART_LEFT
 	jumpAtkRightMove LS_JUMPATTACK_CART_RIGHT
 }
+
 

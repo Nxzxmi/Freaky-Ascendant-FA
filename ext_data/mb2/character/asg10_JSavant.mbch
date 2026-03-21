@@ -1,0 +1,92 @@
+//Legends Mode character file - Created by Frenzy & Leos
+
+ClassInfo
+{
+	name				"asg10_JSavant"
+
+	MBClass				MB_CLASS_JEDI
+	classNumberLimit  	1
+
+	weapons			WP_SABER|WP_MELEE	
+
+	attributes		MB_ATT_SABER_FAST,2|MB_ATT_DEFLECT,3|MB_ATT_FORCEBLOCK,2|MB_ATT_FORCEFOCUS,2|MB_ATT_RALLY,1|MB_ATT_GUN_DEFENSE,2|MB_ATT_FP_SABER_DEFENSE,2
+
+	forcepowers		FP_LEVITATION,3|FP_PUSH,2|FP_SEE,2|FP_PULL,2|FP_DRAIN,3|FP_ABSORB,1|FP_SPEED,1|FP_SABERTHROW,1|FP_TEAM_FORCE,3
+
+	speed     	1.02
+	maxhealth		120
+	forcepool		125
+	forceregen 1.1
+	damageGiven 1.10
+
+	saberstyle SS_STAFF|SS_TAVION
+	saberDamageStyle SS_TAVION,130
+	saberThrowDamage 40
+	APmultiplier		1.1
+	BPmultiplier  1.1
+	ASmultiplier		1.0
+	CSmultiplier		1.05
+
+	classflags CFL_NOPICKUPS|CFL_STATVIEWER
+
+	special1	EAS_FP_SABERTHROW
+	special2 EAS_FP_DRAIN
+	special4 EAS_FP_TEAM_FORCE
+	uioverlay "gfx/icons/support"
+	model		  "bastila"
+	skin			  "default"
+	uishader		"models/players/bastila/mb2_icon_default"
+	
+	model_1		"jedi_female"
+	skin_1			"meetra"
+	uishader_1		"models/players/jedi_female/mb2_icon_meetra"
+	
+	model_2				"satele_tor"
+	skin_2			"default"
+	uishader_2		"models/players/satele_tor/mb2_icon_default"
+	
+	model_3			"satele_kotet"
+	skin_3			"default"
+	uishader_3		"models/players/satele_kotet/mb2_icon_default"
+	
+	saber1			bastila_legends
+	sabercolor		2
+	
+	saber1_1		Exile_legends
+	sabercolor_1		4	
+	
+	saber1_2		satele_legends
+	sabercolor_2	4
+
+	tauntAnim	BOTH_MAUL_TAUNT
+}
+
+description	"Jedi Savant [Jedi]
+
+A well-rounded Jedi with a powerful Force ability that lets them Energize their allies' resource pools.
+
+^2Weaponry:
+- Melee
+- Lightsaber (Staff/Cyan)
+-- 25% more reach
+-- 8% more Cyan DMG
+-- Saber/Blaster Defense (2)
+-- Blaster Deflect (3)
+-- EX Saber Throw (1) ^3[CS1]
+--- 33% more DMG
+-- Slap ^3[GB]
+
+^5Force Powers:
+- Jump (3)
+- Push (2)
+- Pull (2)
+- Sense (2)
+- Drain (3) ^3[CS2]
+- Team Energize (3) ^3[CS4]
+- Absorb (1)
+- Speed (1) ^3[CS3]
+
+^8Attributes:
+- Force Block/Focus (2)
+- Ally Stat Viewer
+- Rally"

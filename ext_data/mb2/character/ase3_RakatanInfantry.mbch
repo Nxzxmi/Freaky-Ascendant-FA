@@ -10,13 +10,12 @@ WP_RepeaterFlags HELD_AMMOREGEN|HELD_PULSE
 WP_CloneRifleFlags HELD_ALTRELOAD
 attributes	MB_ATT_HEALING,2|MB_ATT_ASSEMBLE,2|MB_ATT_GUN_DEFENSE,0|MB_ATT_FP_SABER_DEFENSE,1|MB_ATT_WOOKIEE_FURY,2|MB_ATT_WOOKIE_STRENGTH,1|MB_ATT_CLONEBLOBS,1|MB_ATT_FORCEBLOCK,2
 classflags	CFL_BLOODYMELEE
-classNumberLimit	6
-forcepowers	FP_RAGE,1|FP_LEVITATION,1|FP_PUSH,1
+classNumberLimit	4
+forcepowers	FP_RAGE,1|FP_LEVITATION,1
 resource RESOURCE_RAGE
-resourceRegenCap 	30
 resourceRegenAmount 1
 resourceRegenRate 400
-forcepool	40
+forcepool	60
 forceregen .05
 rankForcepool 100,125
 uioverlay_l "gfx/icons/infantry"
@@ -25,15 +24,14 @@ uioverlay_r "gfx/icons/brawler"
 maxhealth	115
 maxarmor	10
 rankArmor	25
-basespeed	205
+basespeed	210
 skilltimermod	3.0
 damageTaken		0.85
 special1 EAS_MELEE
 special2 EAS_FP_RAGE
 special3 EAS_FP_REPULSE
-rankSaberDamage 235, 270
+rankSaberDamage 260
 saberdamage 120
-saberMaxChain 3
 saber1	rakatan_forceblade_staff
 saberstyle	SS_STAFF
 saber1_1	rakatan_saberpike_legends
@@ -63,53 +61,36 @@ c_att_names_0	"Reinforcements"
 c_att_skill_2	MB_ATT_CLONERIFLE
 c_att_ranks_2	15
 c_att_names_2	"Rakatan Blaster (Clone Rifle)"
-c_att_descs_2	"^72 Concussion Blobs, 45% Longer Reload, 5% Slower RoF, -10% Velocity"
+c_att_descs_2	"^72 Concussion Blobs, +10% DMG, 45% Longer Reload, 5% Slower RoF"
 c_att_skill_3	MB_ATT_ARMOUR
 c_att_ranks_3	5
 c_att_names_3	"Armor (25)"
-c_att_skill_5	MB_ATT_SABER_DAMAGE
-c_att_ranks_5	4
-c_att_names_5	"Saber Damage (235)"
-c_att_skill_6	MB_ATT_FP_SABER_DEFENSE
-c_att_ranks_6	4,0
-c_att_names_6	"Saber Defense"
-c_att_skill_7	MB_ATT_BP_MULTIPLIER
-c_att_ranks_7	4
-c_att_names_7	"Saber BP (100%)"
-c_att_skill_8	MB_ATT_POWER
-c_att_ranks_8	4
-c_att_names_8	"Rage Pool (100)"
 customSpecName_2 "Sorcerer"
 customSpecIcon_2 "gfx/menus/alpha/Icon_SaberCustom"
 customSpecDesc_2 "^7An aggressive and agile force combatant."
 c_att_skill_15	MB_ATT_RESPAWNS
 c_att_ranks_15	0
 c_att_names_15	"Reinforcements"
-c_att_skill_17	MB_ATT_FP_REPULSE
-c_att_ranks_17  10
-c_att_names_17  "Repulse"
-c_att_descs_17	"^3[CS3]"
-c_att_skill_18	MB_ATT_FP_PUSH
-c_att_ranks_18	0,10
-c_att_names_18	"Push"
+c_att_skill_17	MB_ATT_FP_PUSH
+c_att_ranks_17	0,10
+c_att_names_17	"Push"
+c_att_skill_18	MB_ATT_PULL
+c_att_ranks_18	0
+c_att_names_18	"Pull"
 c_att_skill_19	MB_ATT_HEALING
 c_att_ranks_19	0,0,10
 c_att_names_19 	"Healing"
-c_att_skill_20	MB_ATT_FP_PULL
-c_att_ranks_20	0
-c_att_names_20	"Pull"
-c_att_skill_22	MB_ATT_SHOTGUN
+c_att_skill_21	MB_ATT_SHOTGUN
+c_att_ranks_21	0
+c_att_names_21	"Lightning Blast (Shotgun)"
+c_att_descs_21	"^7-20% RoF, -60% DMG, 150x Longer Reload"
+c_att_skill_22	MB_ATT_REPEATER
 c_att_ranks_22	0
-c_att_names_22	"Lightning Blast (Shotgun)"
-c_att_descs_22	"^7-20% RoF, -55% DMG, 150x Longer Reload"
-c_att_skill_23	MB_ATT_REPEATER
-c_att_ranks_23	0
-c_att_names_23	"Lightning Shockwave (Repeater)"
-c_att_descs_23	"^7+20% RoF, 150x Longer Reload,
--40% Velocity, Alt-Fire Only"
-c_att_skill_24	MB_ATT_POWER
-c_att_ranks_24  0,0
-c_att_names_24  "Rage Pool (100/125)"
+c_att_names_22	"Lightning Shockwave (Repeater)"
+c_att_descs_22	"^7+20% RoF, 150x Longer Reload, +30% Velocity, Alt-Fire Only"
+c_att_skill_23	MB_ATT_POWER
+c_att_ranks_23  0,0
+c_att_names_23  "Rage Pool (100/125)"
 }
 WeaponInfo0
 {
@@ -128,7 +109,7 @@ FlashSound0 "sound/weapons/force/lightning.wav"
 Clipsize	24
 customAmmo 288
 rateMod .8
-damageMod .45
+damageMod .4
 velocityMod	1
 reloadTimeModifier 150
 FPMult 1
@@ -162,11 +143,11 @@ altMuzzleEffect	"effects/force/lightningwide.efx"
 altMissileMissEffect "effects/Grenades/EXP_Pulsenade.efx"
 altFlashSound0 "sound/weapons/force/lightning.wav"	
 Clipsize	25
-customAmmo 5
+customAmmo 75
 rateMod .8
 reloadTimeModifier 150
 damageMod 1
-velocityMod	.6
+velocityMod	1.3
 hasAnimOverrides 1
 firingAnim	BOTH_FORCE_DRAIN_RELEASE	
 AnimStand BOTH_FORCE_DRAIN_START
@@ -210,8 +191,8 @@ Clipsize	30
 customAmmo 400
 rateMod 1.05
 reloadTimeModifier 1.45
-damageMod 1.0
-velocityMod	.9
+damageMod 1.1
+velocityMod	1
 }
 ForceInfo0
 {
@@ -233,7 +214,6 @@ A hybrid Rakatan soldier hailing from the Infinite Empire era with aggressive fo
 -Rakatan Armament
 -- Saber Defense (1)
 -- Blaster Defense (0)
--- Chain Limit: 3
 >Rakatan Staffblade (Staff)
 >Rakatan Saberpike (Purple)
 
@@ -249,4 +229,3 @@ A hybrid Rakatan soldier hailing from the Infinite Empire era with aggressive fo
 - Strength (1)
 - Fury (2)
 - 300% Longer Skill CD"
-

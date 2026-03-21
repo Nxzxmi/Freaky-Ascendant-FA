@@ -2,7 +2,7 @@
 
 ClassInfo
 {
-	name			"h10_JTradition"
+	name			"asg10_JTradition"
 	weapons			WP_MELEE|WP_SABER
 	saberstyle		SS_MEDIUM|SS_STRONG|SS_TAVION
 	forcepowers		FP_SABER_OFFENSE,3|FP_LEVITATION,2|FP_PUSH,3|FP_PULL,2|FP_PROTECT,3|FP_SEE,3|FP_SABERTHROW,2
@@ -51,7 +51,7 @@ ClassInfo
 	//respawncustomtime  50000	
 }
 
-description	"Jedi Traditionalist [Jedi]
+description	"Jedi Traditionalist [Jedi] ^3Reworked
 
 A High-to-Late Republic Jedi with strong Force powers and excellent defenses against blasters, but lacking in Lightsaber dueling skills. 
 

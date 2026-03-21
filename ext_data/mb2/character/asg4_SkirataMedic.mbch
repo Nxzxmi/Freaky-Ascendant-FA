@@ -1,0 +1,254 @@
+
+ClassInfo
+{
+	name				"asg4_SkirataMedic"        // Skirata Special Operations Medic v09 -- by Grenade!
+	MBClass				MB_CLASS_JEDI
+	classNumberLimit	1
+
+	weapons				WP_MELEE|WP_SABER|WP_M5|WP_CONC_NADE
+	forcepowers 		FP_SABER_OFFENSE,1|FP_SABER_DEFENSE,1|FP_HEAL,1|FP_PROTECT,1
+	attributes			MB_ATT_FP_SABER_OFFENSE,1|MB_ATT_FP_SABERTHROW,1|WP_MELEE|MB_ATT_WESTARM5|MB_ATT_ARC_RIFLE_SCOPE|MB_ATT_AMMO,3|MB_ATT_FP_SABER_DEFENSE,1|MB_ATT_GUN_DEFENSE,0|MB_ATT_FLIPKICK,1|MB_ATT_STAMINA,3|MB_ATT_DEXTERITY,3|MB_ATT_SLOWFALL|MB_ATT_FLOAT_HOP|MB_ATT_GRAPPLE_HOOK,3|MB_ATT_RALLY
+	resource			RESOURCE_STAMINA
+	forcepool			100
+	rankforcepool		120,165
+	forceregen			1.25
+	
+	maxhealth			50
+	rankHealth			70,95
+
+	MaxArmor			0
+	rankArmor			20,35
+
+	knockbackTaken		1.25
+	skilltimerMod		1
+
+	basespeed			240
+	modelscale			0.98
+
+	special1   			EAS_FP_SABERTHROW
+	special2			EAS_HI_DEX
+	special3			EAS_HI_KICK
+	special4			EAS_HI_GRAPPLEHOOK
+
+	saber1				skirata_blade
+	saberdamagestyle    SS_MEDIUM
+	saberStanceAnim 	BOTH_SABER_STARKILLER_STANCE
+	saberThrowDamage 	60
+
+	WP_SaberFlags		HELD_PULSE
+	WP_M5Flags			// HELD_PULSE
+
+	classflags			CFL_STATVIEWER
+	
+	saberStanceAnim		BOTH_STAND6
+	tauntAnim			BOTH_SPINATTACK7
+	gloatAnim			BOTH_FORCELIGHTNING_HOLD
+	flourishAnim		BOTH_SPINATTACK7
+	meditateAnim		BOTH_STAND10
+	
+	uioverlay_r 		"gfx/icons/hybrid"
+	modelscale 			1.12
+	model 				"clonetrooper_p2"
+	skin  				"shadow"
+	uishader 			"gfx/hud/FA_icons/mb2_icon_clonep2_shadow_nade"
+
+	isCustomBuild		1
+	mbPoints			50
+
+	c_att_skill_0	MB_ATT_INVALID
+	c_att_names_0	"^2Weaponry"
+	c_att_ranks_0	-1
+
+	c_att_skill_1	MB_ATT_MICRO_GRENADES
+	c_att_names_1	"Smoke Grenades"
+	c_att_ranks_1	1,1
+
+	c_att_skill_2	MB_ATT_SONIC_DETONATOR
+	c_att_names_2	"Sonic Detonators"
+	c_att_ranks_2	1,1
+
+	c_att_skill_3	MB_ATT_INVALID
+	c_att_names_3	"^8Attributes"
+	c_att_ranks_3	-1
+
+	c_att_skill_4	MB_ATT_HEALTH
+	c_att_names_4	"Health (70/95)"
+	c_att_ranks_4	5,8
+	c_att_descs_4 	"Bred lean, mean and light."
+	
+	c_att_skill_5	MB_ATT_ARMOUR
+	c_att_names_5	"Armor (20/35)"
+	c_att_ranks_5	5,8
+	c_att_descs_5 	"Any more, and the Kinetic Dampeners fail."
+
+	c_att_skill_6	MB_ATT_INVALID
+	c_att_names_6	"^5ARC Superlight Upgrades"
+	c_att_ranks_6	-1
+
+	c_att_skill_7	MB_ATT_FP_SABERTHROW
+	c_att_names_7	"MagGauntlet ^3[CS1]"
+	c_att_ranks_7	9
+	c_att_descs_7 	"Magnetically accelerate and recall your blade in a controlled tactical throw."
+
+	c_att_skill_8	MB_ATT_CORTOSIS
+	c_att_names_8	"Cortosis Weave"
+	c_att_ranks_8	8
+	c_att_descs_8	"Contingency. Your suit can withstand one saber blow."
+	
+	c_att_skill_9	MB_ATT_POWER
+	c_att_names_9	"Max Energy (120/165)"
+	c_att_ranks_9	6,12
+	c_att_descs_9	"Store additional energy."
+	
+	c_att_skill_10	MB_ATT_LIGHTS_BEACON
+	c_att_names_10	"^3*^7Combat Mesh Network"
+	c_att_ranks_10	5
+	c_att_descs_10	"Share Heal and Protect through a secure tactical mesh with a nearby ally."
+
+
+
+}
+	
+ForceInfo0
+{
+	ForceToReplace		FP_HEAL
+	Icon				"gfx/hud/Alpha/HUD_RadarCone"
+	ForcePowerName		"Heal"
+	startSound 			"sound/weapons/skiratamedic/heal2.wav"
+	// "sound/weapons/LPA_NN-14/charge"
+
+}
+ForceInfo1
+{
+	ForceToReplace		FP_PROTECT
+	Icon				"gfx/hud/Alpha/HUD_RadarCone"
+	ForcePowerName		"Protect"
+	flashsound0			"sound/weapons/skiratamedic/heal1.wav"
+	LoopSound			"sound/weapons/skiratamedic/heal1.wav"
+	endsound			"sound/weapons/skiratamedic/heal1.wav"
+	
+}
+WeaponInfo0
+{
+	WeaponToReplace		WP_SABER
+	WeaponBasedOff		WP_SABER
+	NewWorldModel		"models/weapons2/dummy/dummy.md3"
+	NewViewModel		"models/weapons2/dummy/dummy.md3"
+	Icon				"gfx/hud/w_icon_fox"
+	WeaponName			"ARC Prototype Vibroblade"
+	damageMod			0.1
+	rangeMod			0.4
+
+}
+
+WeaponInfo1
+{
+	WeaponToReplace				WP_CONC_NADE
+	WeaponBasedOff				WP_CONC_NADE
+	NewWorldModel				"models/weapons2/realTD/thermal_w.glm"
+	NewViewModel 				"models/weapons2/realTD/thermal_1.md3"
+	NewHandsModel 				"models/weapons2/realTD/thermal_hand.md3"
+	Icon						"gfx/hud/w_icon_realDP"
+	MissileModel 				"models/weapons2/realTD/thermal_1.md3"
+	AltMissileModel				"models/weapons2/realTD/thermal_1.md3"
+	MissileEffect 				"stone/missile1"
+	AltMissileEffect 			"stone/missile1"
+	MissileMissEffect			"smokenadeleg/explode_vol"
+	MissileHitHumanEffect		"smokenadeleg/explode_vol"
+	MissileHitDroidEffect		"smokenadeleg/explode_vol"
+	AltMissileMissEffect		"smokenadeleg/explode_vol"
+	AltMissileHitHumanEffect	"smokenadeleg/explode_vol"
+	AltMissileHitDroidEffect	"smokenadeleg/explode_vol"
+	FlashSound0					"sound/weapons/smokenade/select.mp3"
+	AltFlashSound0 				"sound/weapons/smokenade/select.mp3"
+	WeaponName 					"Smoke Grenades"
+	damageMod 					0.001
+	ratemod 					0.6
+}
+WeaponInfo2
+{
+	WeaponToReplace		WP_M5
+	WeaponBasedOff		WP_M5
+	NewWorldModel		"models/weapons2/kotor_ionpistol/kotor_ionpistol_w.glm"
+	NewViewModel 		"models/weapons2/kotor_ionpistol/kotor_ionpistol.md3"
+	NewHandsModel		"models/weapons2/kotor_ionpistol/kotor_ionpistol_hand.md3"
+	Icon				"gfx/hud/w_icon_kotor_ionpistol"
+	WeaponName			"DC-22 Experimental Pistol"
+	FlashSound0			"sound/weapons/skiratamedic/fire1.wav"
+	// stored in MBAssets.pk3
+	// "sound/weapons/halo_carbine/fire.wav"
+	// "sound/weapons/delta_pistol/wep_GEN_pistolFire_MP.wav"
+	AltFlashSound0 		"sound/weapons/skiratamedic/altfire1.wav"
+	// stored in MBAssets.pk3
+	// "sound/weapons/halo_carbine/altfire.wav"
+	// "sound/weapons/delta_pistol/wep_GEN_pistolFire_MP.wav"
+	ChargeSound 		"sound/weapons/leia_pistol/altcharge.mp3"	
+	MuzzleEffect 		"Blaster/MuzzleFlash01B"
+	altMuzzleEffect 	"Blaster/MuzzleFlash01B"
+	ChargeEffect		"gfx/effects/cloneFrontFlash"
+	OverchargeEffect	"gfx/effects/cloneFrontFlash"
+	missileEffect 		"Blaster/Shot04B"
+	altMissileEffect 	"Blaster/Shot04B"
+	clipSize 12
+	customAmmo 960
+	hasAnimOverrides 	1
+	animReadyRun 		TORSO_WEAPONIDLE2
+	animReady 			TORSO_WEAPONIDLE2
+	animReadyWalk 		TORSO_WEAPONIDLE2
+	animReadyNoAmmo 	BOTH_ATTACK2 
+	animAttackRun 		BOTH_ATTACK2 
+	animAttack 			BOTH_ATTACK2 
+	animAttackWalk 		BOTH_ATTACK2 
+	damageMod			1
+	rateMod				3
+	fpDamageMod			1.2
+	velocityMod 		2
+	
+}
+
+
+// ======================================================
+// Description
+// ======================================================
+
+description	"Skirata Special Operations Medic
+
+A Skirata-trained Clone field medic equipped with ARC Superlight armor and experimental support gear.
+
+^2Default Weaponry:
+- Melee
+- ARC Prototype MagBlade
+-- Saber Defense 1
+-- 60% Less Reach/Damage
+-- Shocks on Hit
+- DC-17m Experimental Pistol
+-- 20% More FP Damage
+-- 25% Slower Fire Rate
+-- M5 Scope
+
+^5Default Skirata Tech:
+- Kinetic Dampeners (Slowfall, Jedi Quick Getup)
+- Nano-Bacta Emitter (Heal 1)
+- Tethered Field Generator (Protect 1)
+
+^8Default Attributes:
+- Stamina (3)
+- Dexterity (3)
+- Rally
+
+^3Default Abilities:
+- Flipkick (1)
+- SaberThrow (0)  ^3[CS1]
+- Dex Roll  ^3[CS2]
+- Gunkick  ^3[CS3]
+- Grappling Hook (3)  ^3[CS4 Melee]
+
+^9Point Buy Info:
+- MagGauntlet (SaberThrow 1)  ^3[CS1]
+-- 50% Less Damage
+- Cortosis Weave (Cortosis 1)
+^7- ^3*^7Combat Mesh Network (Light's Beacon: Shares Force Powers with a targeted/nearby ally)
+
+Extremely mobile. Extremely fragile.
+
+"

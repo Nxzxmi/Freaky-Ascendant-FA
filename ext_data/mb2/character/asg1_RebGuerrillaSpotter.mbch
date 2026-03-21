@@ -15,7 +15,7 @@ ClassInfo
 	uishader			"models/players/renegade_female2/mb2_icon_default"
 	
 	classNumberLimit	1
-	holdables 		  	HI_SEEKER|HI_MEDPAC|HI_BINOCULARS
+	holdables 		  	HI_MEDPAC|HI_BINOCULARS
 	basespeed	215
 	modelscale         	0.98
 	rateOfFire         	1
@@ -30,7 +30,7 @@ ClassInfo
 	RESOURCE			RESOURCE_STAMINA
 	classNumberLimit	2
     extralives		1
-	knockbackgiven .2
+	knockbackgiven .3
 	uioverlay_r "gfx/icons/tactician"
 	uioverlay_l "gfx/icons/infantry"
 	special1	EAS_HI_SPRINT
@@ -67,37 +67,34 @@ WeaponInfo0
 	animAttackWalk BOTH_PISTOL_ATTACK
 	animCharge BOTH_PISTOL_ATTACK
 	VelocityMod 1
-	rateMod .2
-	damageMod .6
-	clipsize 8
-	FPMult .85
-	reloadTimeModifier .90
+	rateMod .22
+	damageMod .28
+	clipsize 14
+	FPMult .5
 }
-description "(Rebel Guerrilla) Spotter [Soldier]
+description "Guerrilla Spotter [Soldier]
 
 Air
 
 A former civilian turned guerrilla spotter after smuggling and modifying a pistol from the factory they were forced to work in on an Empire occupied Ryloth.
 
-Backliner utilizing a weak automatic pistol alongside good mobility and tracking darts.
+Backliner utilizing a low damage automatic pistol alongside good mobility and tracking darts.
 
 ^2Weaponry:
 - Melee
 -- 10% faster RoF
 - Smuggled Glie-44 (Pistol 1)
--- 80% faster RoF
--- 40% less damage
--- 25% less FP damage
--- 10% faster reload
--- Reduced clipsize (8)
+-- 78% faster RoF
+-- 72% less damage
+-- 50% less FP damage
+-- Reduced clipsize (14)
 
 ^6Inventory:
-- Seeker Drone 
 - Small Medpac ^3[CS2]
 - Electrobinoculars
 
 ^8Attributes:
-- 80% less KB given
+- 70% less KB given
 - Reinforcement (1)
 - Getups (2)
 - Assemble (1)

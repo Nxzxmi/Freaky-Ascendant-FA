@@ -1,0 +1,82 @@
+mando_arm
+{
+	name		"Mandalorian Armorer (Tong)"
+	saberType	SABER_SINGLE
+	saberModel	"models/weapons2/mando_arm/sword_w.glm"
+	saberLength	28
+	noWallMarks	1
+	singleBladeThrowable 0
+	noDlight	1
+	noBlade	1
+	nobladeeffects	1
+	nodismember		1
+	noIdleEffect	1
+	noWallMarks	1
+	trailStyle	2
+	bounceOnWalls	1
+	damageScale		1
+	onInWater	1
+	noManualDeactivate	1
+	throwable 	0
+	nog2marks	1
+	disablebladeishot	1
+	disarmable		0
+	soundOn		sound/weapons/beskar/ping1.mp3
+	soundOff	sound/weapons/beskar/ping1.mp3
+	soundLoop	none
+	swingSound1	sound/weapons/melee/swing1.mp3
+	swingSound2	sound/weapons/melee/swing2.mp3
+	swingSound3	sound/weapons/melee/swing3.mp3
+	spinSound	sound/weapons/melee/swing4.mp3
+	fallSound1	sound/weapons/beskar/LSHit1.mp3
+	fallSound2	sound/weapons/beskar/LSHit2.mp3
+	fallSound3	sound/weapons/beskar/LSHit3.mp3
+	hitSound1	sound/weapons/beskar/LSHit1.mp3
+	hitSound2	sound/weapons/beskar/LSHit2.mp3
+	hitSound3	sound/weapons/beskar/LSHit3.mp3
+	blockSound1	sound/weapons/beskar/LSHit1.mp3
+	blockSound2	sound/weapons/beskar/LSHit2.mp3
+	blockSound3	sound/weapons/beskar/LSHit3.mp3
+   //kataMove                        LS_ROLL_STAB
+}
+
+mando_arm2
+{
+	name		"Mandalorian Armorer (Hammer)"
+	saberType	SABER_SINGLE
+	saberModel	"models/weapons2/mando_arm/doublesword_w.glm"
+	saberLength	27
+	singleBladeThrowable 0
+	noDlight	1
+	noBlade	1
+	nobladeeffects	1
+	nodismember	1
+	noIdleEffect	1
+	noWallMarks	1
+	trailStyle	2
+	bounceOnWalls	1
+	damageScale		1
+	onInWater	1
+	noManualDeactivate	1
+	throwable 	0
+	nog2marks	1
+	disablebladeishot	1
+	disarmable		0
+	soundOn		sound/weapons/beskar/ping1.mp3
+	soundOff	sound/weapons/beskar/ping1.mp3
+	soundLoop	none
+	swingSound1	sound/weapons/melee/swing1.mp3
+	swingSound2	sound/weapons/melee/swing2.mp3
+	swingSound3	sound/weapons/melee/swing3.mp3
+	spinSound	sound/weapons/melee/swing4.mp3
+	fallSound1	sound/weapons/beskar/LSHit1.mp3
+	fallSound2	sound/weapons/beskar/LSHit2.mp3
+	fallSound3	sound/weapons/beskar/LSHit3.mp3
+	hitSound1	sound/weapons/beskar/LSHit1.mp3
+	hitSound2	sound/weapons/beskar/LSHit2.mp3
+	hitSound3	sound/weapons/beskar/LSHit3.mp3
+	blockSound1	sound/weapons/beskar/LSHit1.mp3
+	blockSound2	sound/weapons/beskar/LSHit2.mp3
+	blockSound3	sound/weapons/beskar/LSHit3.mp3
+    //kataMove                        LS_ROLL_STAB
+}

@@ -2,7 +2,7 @@
 
 ClassInfo
 {
-	name				"ase10_gorc"
+	name				"ase10_Gorc"
 	MBClass			MB_CLASS_JEDI
 	classNumberLimit	1
 	
@@ -20,7 +20,7 @@ ClassInfo
 	damagetaken		0.7
 	asmultiplier	0.8
 
-	saberstyle	SS_TAVION|SS_DESANN
+	saberstyle	SS_DESANN
 	model		"gorc"
 	skin			"default"
 	uishader		"models/players/gorc/icon_default"	

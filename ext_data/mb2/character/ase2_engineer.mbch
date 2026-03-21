@@ -2,9 +2,9 @@
 
 ClassInfo
 {
-	name			"ase2_engineer"
+	name			"ase2_Engineer"
 	weapons			WP_BLASTER_PISTOL|WP_MELEE|WP_STUN_BATON|WP_DET_PACK|WP_FLECHETTE
-	attributes		MB_ATT_PISTOL,1|MB_ATT_DET_PACK,3|MB_ATT_STUN_BATON,3|MB_ATT_AMMO,3|MB_ATT_ASSEMBLE,2|MB_ATT_RESPAWNS,2|MB_ATT_DISP_AMMO,2|MB_ATT_HEALING,1|MB_ATT_FLECHETTE,1
+	attributes		MB_ATT_PISTOL,1|MB_ATT_DET_PACK,3|MB_ATT_STUN_BATON,3|MB_ATT_AMMO,3|MB_ATT_ASSEMBLE,2|MB_ATT_RESPAWNS,2|MB_ATT_HEALING,1|MB_ATT_FLECHETTE,1
 	maxhealth		50
 	maxarmor		35
 	MBClass			MB_CLASS_SOLDIER
@@ -103,7 +103,6 @@ description	"Imperial Engineer [Soldier]
 - Reinforcements (2)
 - Assemble (2)
 - Heal (1)
-- Ammo Dispenser (Hold use on Allies)
 - 18% Faster Hacking
 
 A Pilot/Engineer equipped with a shotgun, det packs, dispenser and a Fusion Cutter."

@@ -1,0 +1,85 @@
+//Fuse
+
+ClassInfo
+{
+	name	"ase6_Federation"
+	classNumberLimit	1
+	
+	MBClass	MB_CLASS_MANDALORIAN
+	weapons	WP_MELEE|WP_BLASTER|WP_FRAG_NADE
+	
+	attributes	MB_ATT_AMMO,3|MB_ATT_RALLY|MB_ATT_TRACKING_BEACON|MB_ATT_WRISTLASER,1|MB_ATT_DASH,2|MB_ATT_SHIELD_RECHARGE,2|MB_ATT_FRAGS,2|MB_ATT_QUICKTHROW,1|MB_ATT_BLASTER,1|MB_ATT_DISP_HEALTH,1|MB_ATT_DISP_ARMOR,1|MB_ATT_DISP_FORCE,1|MB_ATT_USE_DISTANCE,8
+	maxhealth	150
+	maxarmor	25
+
+	resource RESOURCE_ENERGY
+	forcepool 100
+	basespeed	220
+
+	uioverlay_l "gfx/icons/tactician"
+	
+	holdables HI_SENTRY_GUN|HI_SHIELD|HI_SEEKER
+	
+	special1 EAS_HI_QUICKTHROW
+	special2 EAS_HI_WRIST
+	special3 EAS_HI_KICK
+	special4 EAS_HI_DASH
+	
+	modelScale 1
+	
+	model	"gunray"
+	skin	"default"
+	uishader  	"gfx/hud/FA_icons/mb2_icon_gunray"
+	
+	model_1	"rune"
+	skin_1	"default"
+	uishader_1  	"gfx/hud/FA_icons/mb2_icon_rune"
+	
+	rateoffire_melee 1.50
+	rateoffire		1.00
+	classflags	CFL_BUBBLESHIELD
+}
+WeaponInfo0
+{
+	WeaponToReplace		WP_BLASTER
+	WeaponBasedOff		WP_BLASTER
+	NewWorldModel 		"models/weapons2/e5/e5_w.glm"
+	NewViewModel 		"models/weapons2/dummy/dummy.md3"
+	Icon				"gfx/hud/w_icon_e5"
+	WeaponName		"E-5 Blaster Rifle"	
+	FlashSound0 		"sound/weapons/blasterMB/fire.mp3"
+	FlashSound1 		"sound/weapons/blasterMB/fire.mp3"
+	FlashSound2 		"sound/weapons/blasterMB/fire.mp3"
+	FlashSound3 		"sound/weapons/blasterMB/fire.mp3"
+	AltFlashSound0	   "sound/weapons/blasterMB/fire.mp3"
+	MuzzleEffect		"Blaster/MuzzleFlash01R"
+	MissileEffect		"blaster/Shot01R"
+	altMuzzleEffect		"Blaster/MuzzleFlash01R"
+	altMissileEffect		"blaster/Shot01R"
+	customAmmo 		960
+}
+
+description	"Trade Federation Leader [Mandalorian]
+
+^2Weaponry:
+- Melee
+- E-5 Blaster Rifle (1)
+-- Based on the E-11
+-- Prim Fire Only
+- Frag Grenades (2)
+-- Quick Throw ^1[CS1]
+- Wrist Laser ^3[CS2]
+
+^6Inventory:
+- Assault Sentry
+- Forcefield
+- Seeker Droid
+
+^8Attributes:
+- Large Personal Shield
+- Health, Armor & Resource Dispenser (1) ^3['Use' on ^3allies]
+-- +8 range
+- Rally
+- Tracking Beacon
+- Gun Kick ^3[CS3]
+- Dash (2) ^3[CS4]"

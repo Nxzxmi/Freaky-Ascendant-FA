@@ -1,0 +1,52 @@
+skirata_blade
+{
+	name		"High Frequency Blade"
+	saberType	SABER_SINGLE
+	saberModel	"models/weapons2/HFBlade/HFBlade.glm"
+	soundOn		"sound/weapons/skiratamedic/draw1.wav"
+	soundLoop	"sound/weapons/skiratamedic/hum4.wav"
+	soundOff	"sound/weapons/skiratamedic/sheathe2.wav"
+				// all stored in MBAssets.pk3
+	saberLength	40
+	saberRadius	2
+	throwable	1
+	maxChain	3
+	disarmable	0
+	notInMP		0
+	noDlight	1
+	noblade		1
+	noIdleEffect	1
+	onInWater	1
+	noWallMarks	1
+	trailStyle	3
+	noManualDeactivate	1
+	bounceOnWalls	0
+	saberColor	blue
+	animSpeedScale	1.2
+	damageScale 	1.1
+
+	spinSound	"sound/weapons/skiratamedic/spin3.wav"
+	swingSound1	"sound/weapons/skiratamedic/swing7.wav"
+	swingSound2	"sound/weapons/skiratamedic/swing8.wav"
+	swingSound3	"sound/weapons/skiratamedic/swing9.wav"
+    fallSound1  "sound/weapons/swordraiden/fall4.mp3"
+    fallSound2  "sound/weapons/swordraiden/fall5.mp3"
+    fallSound3  "sound/weapons/swordraiden/fall6.mp3"
+	hitSound1	"sound/weapons/skiratamedic/hit1.wav"
+	hitSound2	"sound/weapons/skiratamedic/hit2.wav"
+	hitSound3	"sound/weapons/skiratamedic/hit3.wav"
+	blockSound1	"sound/weapons/skiratamedic/block1.wav"
+	blockSound2	"sound/weapons/skiratamedic/block2.wav"
+	blockSound3	"sound/weapons/skiratamedic/block3.wav"
+	bounceSound1	"sound/weapons/swordraiden/bounce1.mp3"
+	bounceSound2	"sound/weapons/swordraiden/bounce2.mp3"
+	bounceSound3	"sound/weapons/swordraiden/bounce3.mp3"
+	g2MarksShader	"gfx/damage/bloodcutmark"
+	g2WeaponMarkShader "textures/gory/bloody_splotch4"
+	blockEffect	"sparks/spark.efx"
+	hitPersonEffect "sword/hitpeople.efx"
+	hitOtherEffect	"sparks/spark.efx"
+	drawAnim	BOTH_STAND2
+	tauntAnim	BOTH_ENGAGETAUNT
+	bladeEffect	"magic/grayblade.efx"
+}

@@ -3,18 +3,21 @@ ClassInfo
 {
 	name				"asg1_RebGuerrillaMechanic"
 	weapons				WP_MELEE|WP_SABER|WP_STUN_BATON
-	attributes			MB_ATT_DISP_ARMOR,1
+	attributes			MB_ATT_DISP_ARMOR,1|MB_ATT_PISTOL,2
 	WP_StunBatonFlags HELD_PULSE
 	WP_SaberFlags	HELD_STUN
 	maxhealth			80
 	maxarmor			80
 	
+	holdables 		  	HI_SEEKER
+	special1 EAS_HI_SPRINT
+	special4	EAS_HI_SEEKER
 	saber1		RebGWrench
 	sabercolor	0
 	saberstyle	SS_TAVION
 	saberMaxChain 1
 	saberDamage 60
-	APmultiplier    0
+	APmultiplier    .10
 	BPmultiplier	0
 	ASmultiplier	.85
 	saberSpecialDamage 2
@@ -29,10 +32,8 @@ ClassInfo
 	model_1				"renegade_male3"
 	skin_1				"default"
 	uishader_1			"models/players/renegade_male3/mb2_icon_default"
-	special1 EAS_HI_SPRINT
 	
 	classNumberLimit	1
-	holdables 		  	CFL_STATVIEWER
 	basespeed			210
 	modelscale         	1
 	rateOfFire         	1
@@ -45,7 +46,7 @@ ClassInfo
 	classNumberLimit	1
     extralives		1
 	knockbackgiven .8
-	knockbacktaken .6
+	knockbacktaken .5
 	uioverlay_l "gfx/icons/infantry"
 	uioverlay_r "gfx/2d/hud/hlp_defend"
 	saberStanceAnim	 BOTH_TALKCOMM1
@@ -70,7 +71,7 @@ NewWorldModel "models/weapons2/fc_f187/f187.glm"
 NewViewModel "models/weapons2/fc_f187/f187.md3"
 NewHandsModel "models/weapons2/fc_f187/f187_hand.md3"
 Icon "gfx/hud/w_icon_fc_f187_all"
-WeaponName "Jury-Rigged Plasma Torch"
+WeaponName "Jury-Rigged Arc Welder"
 hasAnimOverrides 1
 animReady TORSO_WEAPONREADY0
 animReadyWalk TORSO_WEAPONREADY0
@@ -84,7 +85,38 @@ MissileHitDroidEffect "effects/sparks/spark_exp_nosnd"
 rateMod 1.20
 damageMod 1
 }
-description "(Rebel Guerrilla) Mechanic [Soldier]
+WeaponInfo2
+{
+	WeaponToReplace WP_BLASTER_PISTOL
+	WeaponBasedOff  WP_BLASTER_PISTOL
+	NewWorldModel		"models/weapons2/briar_pistol/briar_pistol_w1.glm"
+	NewViewModel		"models/weapons2/briar_pistol/briar_pistol1.md3"
+	ChargeSound "sound/weapons/leia_pistol/altcharge.mp3"
+	Icon				"gfx/hud/w_icon_briar"
+	WeaponName  "Overcharged Junk Pistol"
+	MissileEffect		"effects/flechette/alt_shot.efx"
+	AltMissileEffect	"effects/flechette/alt_shot.efx"
+	PowerupShotEffect	"effects/flechette/alt_shot.efx"
+	ChargeEffect "gfx/effects/yellow_bryarfrontflash"
+	velocityMod 1
+	damageMod 1
+	rateMod 1.0
+	clipsize 1
+	customAmmo         6
+	reloadTimeModifier 2.5
+	FPChargeMult	2
+	AltFireEnabled 		1
+	PrimFireEnabled		0
+	hasAnimOverrides 1
+	animReadyRun TORSO_WEAPONIDLE2
+	animReady TORSO_WEAPONIDLE2
+	animReadyWalk TORSO_WEAPONIDLE2
+	animReadyNoAmmo BOTH_ATTACK2 
+	animAttackRun BOTH_ATTACK2 
+	animAttack BOTH_ATTACK2 
+	animAttackWalk BOTH_ATTACK2
+}
+description "Guerrilla Mechanic [Soldier]
 
 Air
 
@@ -100,13 +132,25 @@ Backliner with the ability to repair armor, low survivability and little combat 
 -- Staggers on hit
 -- 50% less damage (60)
 -- 50% less special damage
-- Jury-Rigged Plasma Torch (Stun Baton)
+- Jury-Rigged Arc Welder (Stun Baton)
 -- 20% slower RoF
 -- Electrifies on hit
+- Overcharged Junk Pistol (Pistol 1)
+-- 10% more damage
+-- 30% less velocity
+-- 40% slower RoF
+-- 150% slower reload
+-- 100% more charged FP damage
+-- Ignites targets
+-- Alt-fire only
+-- Clipsize (1)
+
+^6Inventory:
+- Seeker Drone ^3[CS4]
 
 ^8Attributes:
 - 20% less KB given
-- 40% less KB taken
+- 50% less KB taken
 - Reinforcement (1)
 - 10% faster Hacking
 - Assemble (1)

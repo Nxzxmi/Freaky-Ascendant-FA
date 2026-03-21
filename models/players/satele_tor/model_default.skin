@@ -1,0 +1,15 @@
+head,models/players/satele_tor/satele.tga
+head_eyes_mouth,models/players/satele_tor/satele.tga
+head_hair,models/players/satele_tor/satele.tga
+head_hair_braids,models/players/satele_tor/satele.tga
+
+torso,models/players/satele_tor/satele.tga
+belt_accessories,models/players/satele_tor/satele.tga
+l_arm,models/players/satele_tor/satele.tga
+l_hand,models/players/satele_tor/satele.tga
+r_arm,models/players/satele_tor/satele.tga
+r_hand,models/players/satele_tor/satele.tga
+
+hips,models/players/satele_tor/satele.tga
+l_leg,models/players/satele_tor/satele.tga
+r_leg,models/players/satele_tor/satele.tga
